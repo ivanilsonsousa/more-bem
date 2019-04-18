@@ -1,0 +1,43 @@
+fieldset {
+	width: 500px;
+	padding: 10px;
+	margin: 20px auto auto auto;
+}
+
+input {
+	height: 30px;
+	width: 360px;
+	margin: 10px;
+	position: left;
+	border-radius: 5px;
+	border: 1px solid black;
+	font-size: 14pt;
+	padding: 0px 10px;
+	outline: none;
+}
+
+input[type=submit]{
+	cursor: pointer;
+}
+
+body {
+	font-family: arial;
+	font-size: 10pt;
+}
+
+legend {
+	font-size: 16pt;
+	font-weight: bold;
+}
+
+#botao {
+	font-size: 13pt;
+	width: 80px;
+	position: relative;
+	left: 391px;
+	margin: 10px 10px;
+}
+
+#nova-senha {
+	width: 372px;
+}

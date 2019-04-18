@@ -1,0 +1,153 @@
+fieldset {
+	width: 520px;
+	padding: 10px;
+	margin: auto auto auto auto;
+}
+
+select {
+	height: 30px;
+	width: 180px;
+	position: relative;
+	outline: none;
+	left: 10px;
+}
+
+textarea {
+	resize: none;
+	outline: none;
+	margin: 0px;
+	border-radius: 5px;
+	position: relative;
+	left: 80px;
+	bottom: 10px;
+	border: 1px solid black;
+}
+
+input {
+	height: 30px;
+	width: 200px;
+	margin: 10px;
+	position: left;
+	border-radius: 5px;
+	border: 1px solid black;
+	font-size: 14pt;
+	padding: 0px 10px;
+	outline: none;
+}
+
+input[type=button] {
+	font-size: 13pt;
+	width: 100px;
+	cursor: pointer;
+	position: relative;
+	left: 390px;
+	margin: 10px 0px;
+}
+
+input[type=submit] {
+	cursor: pointer;
+}
+
+body {
+	font-family: arial;
+	font-size: 10pt;
+}
+
+legend {
+	font-size: 16pt;
+	font-weight: bold;
+}
+
+#legenda-item, #legenda-dados-item {
+	font-size: 13pt;
+
+}
+
+#label-quant, #quant {
+	position: relative;
+	left: 97px;
+}
+
+
+#label-medida, #medida {
+	position: relative;
+	left: 21px;
+}
+
+#descricao {
+	position: relative;
+	padding: 0px;
+	top: 10px;
+}
+
+#marca {
+	width: 150px;
+}
+
+#medida {
+	width: 100px;
+}
+
+#campo-item {
+	padding: 20px;
+}
+
+#dados-item {
+	height: 200px;
+}
+
+.form-interno {
+	margin: 20px 0px;
+	width: 500px;
+}
+
+#selecionar-item {
+	margin: 10px 0px;
+}
+
+#botao {
+	font-size: 13pt;
+	width: 100px;
+	position: relative;
+	left: 413px;
+	margin: 10px 10px;
+}
+
+#titulo {
+	width: 180px;
+}
+
+#prazo {
+	width: 165px;
+}
+
+#quant {
+	width: 50px;
+}
+
+#label-prazo, #prazo {
+	position: relative;
+	right: 3px;
+}
+
+table {
+	padding: 0px;
+	position: relative;
+	border-collapse: collapse;
+	margin: auto auto;
+	text-align: center;
+	width: 450px;
+}
+
+td, tr {
+	padding: 0px 20px;
+}
+
+h2 {
+	text-align: center;
+	margin: 10px 0px;
+}
+
+tr:nth-child(even) {
+	background: #ddd;
+}
