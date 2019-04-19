@@ -27,7 +27,7 @@
 		<legend id="legenda-dados-login">Dados de Login</legend>
 			<label for="email">Email:</label><input type="email" id="email" name="email"><br>
 			<label for="senha">Senha:</label><input type="password" id="senha" name="senha"><br>
-			<label for="num">Repetir Senha:</label><input type="password" id="rsenha" name="rsenha"><br>
+			<label for="rsenha">Repetir Senha:</label><input type="password" id="rsenha" name="rsenha"><br>
 		</fieldset>
 		<input type="submit" value="Enviar" id="botao"><br>
 	</form>
