@@ -23,7 +23,7 @@
 	<title>Editar Perfil</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="_css/estilo-tela-editar-fornecedor.css">
-	<link rel="shortcut icon" href="_imagens/icon.png">
+	<link rel="shortcut icon" href="_imagens/icone.png">
 </head>
 <body>
 

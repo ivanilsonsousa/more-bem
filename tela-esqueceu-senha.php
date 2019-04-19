@@ -4,7 +4,7 @@
 	<title>Esqueceu a senha</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="_css/estilo-tela-redefinir-senha.css">
-	<link rel="shortcut icon" href="_imagens/icon.png">
+	<link rel="shortcut icon" href="_imagens/icone.png">
 </head>
 <body>
 	<form method="POST" action="tela-nova-senha.php">

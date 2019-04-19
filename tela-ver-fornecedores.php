@@ -10,7 +10,7 @@
 	<title>Ver Fornecedores</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="_css/estilo-tela-ver-fornecedores.css">
-	<link rel="shortcut icon" href="_imagens/icon.png">
+	<link rel="shortcut icon" href="_imagens/icone.png">
 </head>
 <body>
 		<h2>FORNECEDORES DO BANCO DE DADOS</h2>

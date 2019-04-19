@@ -3,15 +3,14 @@
 <head>
 	<title>login</title>
 	<meta charset="utf-8">
-	<link rel="shortcut icon" href="_imagens/icon.png">
+	<link rel="shortcut icon" href="_imagens/icone.png">
 	<link rel="stylesheet" href="_css/estilo-login.css">
 	<script type="text/javascript" src="_scripts/funcoes.js"></script>
 </head>
 <body>
-	<img id="logo" src="_imagens/logo3.png" alt="nao carregou">
-	
+	<img id="logo" src="_imagens/logo3.png" alt="nao carregou">	
 	<fieldset id="campo-config" class="relative-parent">
-	<legend id="legenda">Login</legend>
+		<legend id="legenda">Login</legend>
 		<form method="POST" action="_controles/processa-login.php">
 
 			<label for="usuario">Usuário:</label> <input type="email" id="usuario" name="usuario" placeholder="Digite seu email"><br>

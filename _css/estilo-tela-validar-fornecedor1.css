@@ -5,6 +5,8 @@ fieldset {
 }
 
 input {
+	background-color: rgba(0.5, 0.1, 0.3, 0.2);
+	text-align: center;
 	height: 30px;
 	width: 360px;
 	margin: 10px;
@@ -22,13 +24,8 @@ body {
 }
 
 legend {
-	font-size: 16pt;
 	font-weight: bold;
-}
-
-#legenda-end, #legenda-dados-login {
-	font-size: 13pt;
-
+	font-size: 16pt;
 }
 
 #legenda-end, #legenda-dados-login {
@@ -69,15 +66,6 @@ legend {
 	width: 427px;
 }
 
-#botao {
-	cursor: pointer;
-	font-size: 13pt;
-	width: 80px;
-	position: relative;
-	left: 435px;
-	margin: 10px 10px;
-}
-
 #email{
 	width: 420px;
 }
@@ -86,6 +74,11 @@ legend {
 	width: 415px;
 }
 
-#rsenha {
-	width: 368px;
+#botao {
+	cursor: pointer;
+	font-size: 13pt;
+	width: 80px;
+	position: relative;
+	left: 435px;
+	margin: 10px 10px;
 }

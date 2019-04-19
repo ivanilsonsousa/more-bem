@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
 	<title>Novo Item</title>
 	<link rel="stylesheet" href="_css/estilo-tela-novo-item.css">
-	<link rel="shortcut icon" href="_imagens/icon.png">
+	<link rel="shortcut icon" href="_imagens/icone.png">
 </head>
 <body>
 	<form method="POST" action="_controles/processa-cadastro-item.php">

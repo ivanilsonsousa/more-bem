@@ -11,7 +11,7 @@
 	<title>Cadastrar Orçamento</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="_css/estilo-tela-novo-orcamento.css">
-	<link rel="shortcut icon" href="_imagens/icon.png">
+	<link rel="shortcut icon" href="_imagens/icone.png">
 	<script type="text/javascript" src="_scripts/funcoes.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>

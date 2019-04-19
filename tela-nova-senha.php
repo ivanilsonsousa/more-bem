@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
 	<title>Nova Senha</title>
 	<link rel="stylesheet" href="_css/estilo-tela-nova-senha.css">
-	<link rel="shortcut icon" href="_imagens/icon.png">
+	<link rel="shortcut icon" href="_imagens/icone.png">
 </head>
 <body>
 	<form method="POST" action="index.php">

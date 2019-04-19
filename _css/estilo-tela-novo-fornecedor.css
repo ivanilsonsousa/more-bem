@@ -16,10 +16,6 @@ input {
 	outline: none;
 }
 
-input[type=submit]{
-	cursor: pointer;
-}
-
 body {
 	font-family: arial;
 	font-size: 10pt;
@@ -61,12 +57,7 @@ legend {
 }
 
 #rsocial {
-	width: 280px;
-}
-
-#idforn {
-	width: 40px;
-	background-color: rgba(0.5, 0.1, 0.3, 0.2);
+	width: 382px;
 }
 
 #cnpj {
@@ -74,6 +65,7 @@ legend {
 }
 
 #botao {
+	cursor: pointer;
 	font-size: 13pt;
 	width: 80px;
 	position: relative;
@@ -83,7 +75,6 @@ legend {
 
 #email{
 	width: 420px;
-	background-color: rgba(0.5, 0.1, 0.3, 0.2);
 }
 
 #senha {

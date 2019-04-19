@@ -12,7 +12,7 @@
 	<title>home</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="_css/estilo-tela-inicial-fornecedor.css">
-	<link rel="shortcut icon" href="_imagens/icon.png">
+	<link rel="shortcut icon" href="_imagens/icone.png">
 </head>
 <body>
 
@@ -27,6 +27,8 @@
 		<button onclick="window.location.href='tela-novo-orcamento.php';" class="botao">Adicionar Orçamentos</button><br>
 		<button onclick="window.location.href='tela-ver-itens.php';" class="botao">Itens</button>
 		<button onclick="window.location.href='tela-ver-fornecedores.php';" class="botao">Fornecedores</button>
+
+		<button onclick="window.location.href='tela-validar-fornecedor.php';" class="botao">Validar</button>
 		<button onclick="window.location.href='_controles/sair.php';" class="botao">Sair</button>
 	</fieldset>
 	
