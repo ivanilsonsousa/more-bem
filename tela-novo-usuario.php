@@ -7,7 +7,6 @@
 	<link rel="shortcut icon" href="_imagens/icone.png">
 </head>
 <body>
-
 	<fieldset id="campo-cadastro">
 	<legend id="legenda">Cadastrar Usuário</legend>
 	<form method="POST" action="_controles/processa-cadastro-fornecedor.php">

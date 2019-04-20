@@ -1,0 +1,175 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	box-sizing: border-box;
+	font-family: arial;
+	font-size: 10pt;
+}
+
+.relative-parent {
+	background: transparent;
+	margin: auto;
+	width: 350px;
+	height: 200px;
+	padding: 10px;
+	border: 1px #888 solid;
+	position: relative;
+	top: 0px;	
+	left: 150px;
+}
+
+.relative {
+	background: #af8542;
+  	cursor: pointer;
+  	position: relative;
+  	left: 0px;
+  	top: 0px;*/
+  	width: 200px;
+}
+
+.blocoIcones {
+	display: block;
+	margin: 20px;
+	float: left;
+	width: 200px;
+	height: 35px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.blocoIcones input[type='text'], input[type='password']{
+	float: left;
+	width: 70%;
+	height: 100%;
+	border: none;
+	padding: 0px 0px;
+	outline: none;
+	background: transparent;
+}
+
+.blocoIcones button {
+	float: left;
+	width: 15%;
+	height: 100%;
+	border: none;
+	outline: none;
+	background: transparent;
+	cursor: pointer;
+}
+
+.blocoIcones svg{
+	width: 40%;
+	height: 40%;
+	fill: #555;	
+}
+
+.blocoIcones button[id='cadeado'] svg{
+	width: 35%;
+	height: 35%;
+	fill: #555;	
+}
+
+.blocoIcones button[id='olho'] svg{
+	width: 50%;
+	height: 50%;
+	fill: #555;
+	position: relative;
+	top: 2px;	
+	right: 5px;
+}
+
+.blocoIcones img{
+	/*width: 55%;*/
+	/*height: 55%;*/
+	width: 65%;
+	height: 65%;
+	fill: #555;
+	opacity: 0.6;
+	position: relative;
+	top: 2px;	
+	right: 5px;
+}
+
+.blocoIcones button:hover svg{
+	fill: #000;
+}
+
+#div-user {
+	position: relative;
+	width: 230px;
+	left: 60px;
+	top: -15px;
+}
+
+#div-senha {
+	width: 240px;
+	position: relative;
+	left: 50px;
+	top: -40px;
+}
+
+#legenda {
+	font-size: 16pt;
+	font-weight: bold;
+}
+
+#label-user {
+	position: relative;
+	right: 260px;
+	top: 15px;
+}
+
+#label-senha {
+	position: relative;
+	right: 260px;
+	top: 50px;
+}
+
+#botao {
+	cursor: pointer;
+	border: 1px #888 solid;
+	border-radius: 0px;
+	width: 80px;
+	height: 25px;
+	position: relative;
+	top: -50px;
+	left: 220px;
+	margin: 10px 10px;
+}
+
+#esqueceu {
+	position: relative;
+	top: -30px;
+	left: 70px;
+}
+
+#cad-form {
+	position: relative;
+	right: 0px;
+	top: 50px;
+}
+
+a {
+	font-size: 10px;
+	width: 100px;
+}
+
+#div-links {
+	width: 250px;
+	position: relative;
+	top: -55px;
+}
+
+img {
+    max-width: 290px;
+    width: auto;
+}
+
+#logo{
+	position: relative; 
+	/*left: 330px; /* posiciona a 90px para a esquerda */ 
+	/*top: 190px; /* posiciona a 70px para baixo */
+	top: 190px;
+	left: 330px;
+}

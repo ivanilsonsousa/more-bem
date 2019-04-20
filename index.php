@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title>login</title>
 	<meta charset="utf-8">
+	<title>Login</title>
 	<link rel="shortcut icon" href="_imagens/icone.png">
-	<link rel="stylesheet" href="_css/estilo-login.css">
-	<script type="text/javascript" src="_scripts/funcoes.js"></script>
+	<link rel="stylesheet" type="text/css" href="_css/estilo1.css">
+	<script type="text/javascript" src="_scripts/acoes.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-	<img id="logo" src="_imagens/logo3.png" alt="nao carregou">	
-	<fieldset id="campo-config" class="relative-parent">
-		<legend id="legenda">Login</legend>
-		<form method="POST" action="_controles/processa-login.php">
-
-			<label for="usuario">Usuário:</label> <input type="email" id="usuario" name="usuario" placeholder="Digite seu email"><br>
-			<label for="senha">Senha:</label> <input type="password" id="senha" name="senha" placeholder="Digite sua senha"><br>
-			<img src="_imagens/olho-fechado12.png" id="olho" class="relative">
-			
-			<a href="tela-esqueceu-senha.php" id="esqueceu">Esqueceu a senha?</a>
-			<input type="submit" value="Confirmar" id="botao"><br>
-			<a href="tela-novo-fornecedor.php" id="cad-forn">Cadastrar-se como fornecedor</a>
-
-		</form>
+	<img id="logo" src="_imagens/logo.png" alt="nao carregou">
+	<fieldset id="campo-field" class="relative-parent">
+	<legend id="legenda">Login</legend>
+	<form id="form" method="POST" action="_controles/processa-login.php">
+		<label id="label-user">Usuário:</label>
+		<div class="blocoIcones" id="div-user">
+			<button disabled="true" id="user-homem"><?php include "_imagens/user-homem.svg"?></button>
+			<input type="text" name="usuario" id="usuario" placeholder="Digite seu email..."><br>
+		</div>
+		<label id="label-senha">Senha:</label>
+		<div class="blocoIcones" id="div-senha">
+			<button disabled="true" id="cadeado"><?php include "_imagens/cadeado.svg"?></button>
+			<input type="password" name="senha" id="senha" placeholder="Digite a senha...">
+			<button type="button" id="olho"><img id="img-olho" src="_imagens/olho-aberto.svg"/></button>
+		</div>
+		<button type="submit" id="botao">Confirmar</button>
+	</form>
+	<div id="div-links">
+		<a href="tela-esqueceu-senha.php" id="esqueceu">Esqueceu a senha?</a>
+		<a href="tela-novo-fornecedor.php" id="cad-forn">Cadastrar-se como fornecedor</a>
+	</div>
 	</fieldset>
-	<script>olho();</script>
 </body>
+<script type="text/javascript">olho()</script>
 </html>
