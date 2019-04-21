@@ -3,26 +3,29 @@
 <head>
 	<meta charset="utf-8">
 	<title>Login</title>
-	<link rel="shortcut icon" href="_imagens/icone.png">
-	<link rel="stylesheet" type="text/css" href="_css/estilo1.css">
-	<script type="text/javascript" src="_scripts/acoes.js"></script>
+	<link rel="stylesheet" type="text/css" href="_css/estilo-login.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<script type="text/javascript" src="funcoes/funcoes.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-	<img id="logo" src="_imagens/logo.png" alt="nao carregou">
-	<fieldset id="campo-field" class="relative-parent">
+	<div id="site">
+	<div id="imagem">
+		<img src="_imagens/logo.png" alt="nao carregou">
+	</div>
+	<fieldset class="relative-parent">
 	<legend id="legenda">Login</legend>
 	<form id="form" method="POST" action="_controles/processa-login.php">
-		<label id="label-user">Usuário:</label>
+		<label id="label-user" for="usuario">Usuário:</label>
 		<div class="blocoIcones" id="div-user">
-			<button disabled="true" id="user-homem"><?php include "_imagens/user-homem.svg"?></button>
 			<input type="text" name="usuario" id="usuario" placeholder="Digite seu email..."><br>
+			<i id="man" class="fas fa-user"></i>
 		</div>
-		<label id="label-senha">Senha:</label>
+		<label id="label-senha" for="senha">Senha:</label>
 		<div class="blocoIcones" id="div-senha">
-			<button disabled="true" id="cadeado"><?php include "_imagens/cadeado.svg"?></button>
 			<input type="password" name="senha" id="senha" placeholder="Digite a senha...">
-			<button type="button" id="olho"><img id="img-olho" src="_imagens/olho-aberto.svg"/></button>
+			<i id="lock" class="fas fa-lock"></i>
+			<i><img id="olho" onclick="funa()" src="_imagens/eye-regular.svg"></i>
 		</div>
 		<button type="submit" id="botao">Confirmar</button>
 	</form>
@@ -31,6 +34,22 @@
 		<a href="tela-novo-fornecedor.php" id="cad-forn">Cadastrar-se como fornecedor</a>
 	</div>
 	</fieldset>
+	</div>
+
+	<script type="text/javascript">
+		function funa(){
+			
+			if (document.getElementById('senha').type == 'password') {
+            	document.getElementById('senha').type = 'text';
+            	var img = document.getElementById('olho');
+            	img.src = '_imagens/eye-slash-regular.svg';
+	        } else {
+	            document.getElementById('senha').type = 'password';
+	            var img = document.getElementById('olho');
+	            img.src = '_imagens/eye-regular.svg';
+	        }
+		}
+	</script>
+
 </body>
-<script type="text/javascript">olho()</script>
 </html>

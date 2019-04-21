@@ -21,6 +21,19 @@ function preenche(){
 	});
 }
 
+function funa2(){
+			
+	if (document.getElementById('senha').type == 'password') {
+    	document.getElementById('senha').type = 'text';
+    	var img = document.getElementById('olho');
+    	img.src = '_imagens/eye-slash-regular.svg';
+    } else {
+        document.getElementById('senha').type = 'password';
+        var img = document.getElementById('olho');
+        img.src = '_imagens/eye-regular.svg';
+    }
+}
+
 function olho(){
     document.getElementById('olho').addEventListener('click', function() {
         if (document.getElementById('senha').type == 'password') {
