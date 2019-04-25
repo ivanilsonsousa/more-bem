@@ -11,7 +11,7 @@
 		if ($bd->msgErro == ""){
 
 			if ($bd->logar($usuario, $senha)) {
-				header("location: ../area-privada.php");
+				header("location: ../tela-inicial-adm.php");
 			} else {
 				echo('<script>alert("Email e/ou senha incorretos");</script>');
 				header("refresh: 0.1; ../index.php");

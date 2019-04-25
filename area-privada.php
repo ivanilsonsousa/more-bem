@@ -1,9 +1,9 @@
 <?php
-    session_start();
-	if (!isset($_SESSION['idforn'])) {
-		header("location: index.php");
-		exit;
-	}
+//    session_start();
+//	if (!isset($_SESSION['idforn'])) {
+//		header("location: index.php");
+//		exit;
+//	}
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@
 		<h2>Bem-Vindo Fornecedor!</h2>
 	</div>
 	<fieldset id="campo-acoes">
-	<legend id="legenda">Ações</legend>	
+	<legend id="legenda">Ações</legend>
 		<button onclick="window.location.href='tela-editar-fornecedor.php';" id="edt-perfil" class="botao">Editar<br>Pefil</button>
 		<button onclick="window.location.href='tela-novo-item.php';" class="botao">Adicionar<br>Itens</button>
 		<button onclick="window.location.href='tela-novo-orcamento.php';" class="botao">Adicionar Orçamentos</button><br>
@@ -31,9 +31,6 @@
 		<button onclick="window.location.href='tela-novo-usuario.php';" class="botao">Novo User</button>
 		<button onclick="window.location.href='_controles/sair.php';" class="botao">Sair</button>
 	</fieldset>
-	
+
 </body>
 </html>
-
-
-
