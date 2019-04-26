@@ -9,7 +9,7 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
-		<title>Gerenciar Fornecedores</title>
+		<title>Novos Fornecedores Inscritos</title>
 		<link rel="shortcut icon" href="_imagens/icone.png">
 		<link rel="stylesheet" type='text/css' href="_css/estilo-tela-gerenciar-fornecedores-adm1.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
@@ -22,26 +22,23 @@
 		<div class="site">
       <i class="fas fa-cogs fa-4x"></i><i class="fas fa-address-card fa-2x"></i><br><br>
 			<fieldset id="form-content">
-				<legend id="legenda"> Gerenciar Fornecedores</legend><br>
+				<legend id="legenda">Novos Fornecedores Inscritos</legend><br>
         <div class="barra-pesquisa">
         </div>
         <div id="div-pesquisa" class="blocoIcones">
           <input class="blocoIcones" type="text" placeholder="Pesquisar...">
           <button class="blocoIcones"><i class="fas fa-search"></i></button>
         </div>
-        <div onclick="window.location.href='tela-adm-novos-fornecedores-inscritos.php';" class="botao">
-          <i class="fas fa-suitcase"></i>
-          <label>Validar Fornecedores</label>
-        </div>
+
 
 				<div class="tabela table-responsive">
 					<table class="tabela table table-hover">
 							<tr>
 								<th>Razão Social</th>
+								<th></th>
 								<th>Rua</th>
 								<th>Número</th>
 								<th>Telefone</th>
-								<th>Apagar</th>
 							</tr>
 
 							<?php
@@ -50,12 +47,12 @@
 								while($dado = $lista->fetch(PDO::FETCH_ASSOC)) {?>
 									<tr>
 										<td><?php echo $dado['rsocial'];?></td>
+										<td>
+											<a href="tela-validar-fornecedor.php" title="Mostrar mais detalhes" class "bnt"><i class="fas fa-info-circle"></i></a>
+										</td>
 										<td><?php echo $dado['rua'];?></td>
 										<td><?php echo $dado['num'];?></td>
 										<td><?php echo $dado['tel'];?></td>
-										<td>
-											<a href="" class "bnt"><i class="fas fa-trash-alt"></i></a>
-										</td>
 									</tr>
 							<?php
 								} ?>

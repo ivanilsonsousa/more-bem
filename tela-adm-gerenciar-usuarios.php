@@ -16,7 +16,7 @@
 			<fieldset id="form-content">
 				<legend>Gerenciar Usuários</legend><br>
         <div class="barra-pesquisa">
-          <i id="mais" onclick="window.location.href='tela-novo-usuario.php';" class="fas fa-plus-circle fa-2x"></i>
+          <i id="mais" onclick="window.location.href='tela-novo-usuario.php';" title="Adicionar Usuario" class="fas fa-plus-circle fa-2x"></i>
         </div>
         <div id="div-pesquisa" class="blocoIcones">
           <input class="blocoIcones" type="text" placeholder="Pesquisar...">
@@ -29,6 +29,9 @@
 
         <!-- <a href="tela-ver-usuarios.php">Ver Usuarios</a> -->
         <!-- <a href="tela-novo-usuario.php">Adicionar Usuario</a> -->
+
+
+
 			</fieldset>
 		</div>
 
