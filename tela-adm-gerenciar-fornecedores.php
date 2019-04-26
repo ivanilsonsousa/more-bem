@@ -1,10 +1,17 @@
+<?php
+	require_once "_classes/BD.class.php";
+
+	$bd = new BD();
+	$bd->abrir("meubanco", "localhost", "root", "");
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
 		<title>Gerenciar Fornecedores</title>
 		<link rel="shortcut icon" href="_imagens/icone.png">
-		<link rel="stylesheet" type='text/css' href="_css/estilo-tela-gerenciar-fornecedores-adm.css">
+		<link rel="stylesheet" type='text/css' href="_css/estilo-tela-gerenciar-fornecedores-adm1.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
 		<link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
@@ -26,9 +33,31 @@
           <label>Validar Fornecedores</label>
         </div>
 
-        <a href="tela-ver-fornecedores.php">Ver Fornecedores</a>
-        <a href="tela-novo-fornecedor.php">Adicionar Fornecedor</a>
-        <a href="tela-validar-fornecedor.php">Validar Fornecedor</a>
+				<div class="tabela">
+					<table>
+							<tr>
+								<th>Razão Social</th>
+								<th>Rua</th>
+								<th>Número</th>
+								<th>Telefone</th>
+							</tr>
+
+							<?php
+								$lista = $bd->listarTodosOsFornecedores();
+
+								while($dado = $lista->fetch(PDO::FETCH_ASSOC)) {?>
+									<tr>
+										<td><?php echo $dado['rsocial'];?></td>
+										<td><?php echo $dado['rua'];?></td>
+										<td><?php echo $dado['num'];?></td>
+										<td><?php echo $dado['tel'];?></td>
+									</tr>
+							<?php
+								} ?>
+
+					</table>
+				</div>
+
 			</fieldset>
 		</div>
 

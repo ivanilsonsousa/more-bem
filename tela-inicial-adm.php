@@ -21,7 +21,7 @@
 
 		<div class="site">
 			<h1>Bem-Vindo Rafael!</h1>
-			<button type="button" id="sair" onclick="window.location.href='_controles/sair.php';" class="sair"><i class="fas fa-power-off fa-2x"></i><br>Sair</button>
+			<button type="button" id="sair" onclick="sair()" class="sair"><i class="fas fa-power-off fa-2x"></i><br>Sair</button>
 			<fieldset>
 				<legend>Ações</legend><br>
 				<button type="button" onclick="window.location.href='tela-adm-gerenciar-usuarios.php';" class="btn btn-primary"><i class="fas fa-cogs fa-2x"></i><i class="fas fa-address-card fa-2x"></i><br><br><label>Gerenciar Usuários</label></button>
@@ -32,6 +32,14 @@
 				<button type="button" onclick="window.location.href='tela-adm-gerenciar-itens.php';" class="btn btn-primary"><i class="fas fa-cogs fa-2x"></i><i class="fas fa-list-ul fa-2x"></i><br><br><label>Gerenciar Itens</label></button>
 			</fieldset>
 		</div>
+
+    <script type="text/javascript">
+      function sair(){
+        if (confirm("Deseja realmente sair?")){
+            location.href="_controles/sair.php";
+        }
+      }
+    </script>
 
 	</body>
 </html>

@@ -27,6 +27,11 @@
 .barra-pesquisa{
   margin: 0px 10px;
   padding: 0px 10px;
+	width: 92%;
+
+	position: relative;
+	margin: auto auto;
+
   height: 50px;
   border: 1px #888 solid;
   border-radius: 4px;
@@ -178,3 +183,34 @@
   top: -33px;
   left: 45px;
 }
+
+/* TABELA DE FORNECEDORES */
+
+.tabela{
+	margin: 0;
+	height: 60%;
+	width: 100%;
+	position: relative;
+	top: 0px;
+}
+
+.tabela table {
+	width: 95%;
+	height: 90%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	position: relative;
+	margin: auto auto;
+	text-align: center;
+}
+
+.tabela td, tr {
+	padding: 0px 10px;
+}
+
+.tabela td{
+	font-weight: normal;
+}
+
+/* FIM TABELA DE FORNECEDORES */
