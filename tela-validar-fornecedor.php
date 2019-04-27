@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title>Validar Cadastro Fornecedor</title>
+	<title>Validar Fornecedor</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="_css/estilo-tela-validar-fornecedor1.css">
+	<link rel="stylesheet" href="_css/estilo-tela-validar-fornecedor2.css">
 	<link rel="shortcut icon" href="_imagens/icone.png">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+	<link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
+	<div class="site">
+		<i class="fas fa-user-tie fa-4x"></i><i class="fas fa-check fa-2x"></i><br><br>
+		<fieldset id="campo-cadastro">
+		<legend id="legenda">Validar Fornecedor</legend>
+		<form method="POST" action="#">
 
-	<fieldset id="campo-cadastro">
-	<legend id="legenda">Validar Cadastro</legend>
-	<form method="POST" action="_controles/processa-validar-fornecedor.php">
+      <label for="rsocial">Razão Social:</label> <input type="text" id="rsocial" readonly="true" name="rsocial" value="SA. DISTRIBUIDORA"><br>
+  		<label for="cnpj">CNPJ:</label> <input type="text" id="cnpj" readonly="true" name="cnpj"><br>
 
-		<label for="rsocial">Razão Social:</label> <input type="text" value="CNOVA LTDA" id="rsocial" readonly="true" name="rsocial"><br>
-		<label for="cnpj">CNPJ:</label> <input type="text" id="cnpj" readonly="true" name="cnpj" value="86.672.175/0001-60"><br>
+      <fieldset class="form-interno">
+			<legend id="legenda-dados-login">Endereço</legend>
+        <label for="rua">Rua:</label><input type="text" id="rua" readonly="true" name="rua">
+  			<label for="num">Num:</label><input type="number" id="num" readonly="true" name="num" min="1"><br>
+  			<label for="cep">CEP:</label><input type="text" id="cep" readonly="true" name="cep">
+  			<label for="tel">Tel:</label><input type="tel" id="tel" readonly="true" name="tel">
+			</fieldset>
 
-		<fieldset id="endereco" class="form-interno">
-		<legend id="legenda-end">Endereço</legend>
-			<label for="rua">Rua:</label><input type="text" id="rua" readonly="true" value="RUA CLAÚDIO SANTOS PEREIRA" name="rua">
-			<label for="num">Num:</label><input type="number" id="num" readonly="true" value="112" name="num" min="1"><br>
-			<label for="cep">CEP:</label><input type="text" id="cep" readonly="true" value="62580-000" name="cep">
-			<label for="tel">Tel:</label><input type="tel" id="tel" readonly="true" value="36611-0125" name="tel">
+			<fieldset class="form-interno">
+			<legend id="legenda-dados-login">Dados de Login</legend>
+				<label for="email">Email:</label><input type="email" id="email" readonly="true" name="email"><br>
+				<label for="senha">Senha:</label><input type="password" id="senha" readonly="true" name="senha"><br>
+			</fieldset>
+			<input class="btn btn-default" type="submit" value="Validar" id="botao-validar">
+			<input class="btn btn-default" type="submit" value="Negar" id="botao-negar"><br>
+		</form>
 		</fieldset>
-
-		<fieldset id="dados-login" class="form-interno">
-		<legend id="legenda-dados-login">Dados de Login</legend>
-			<label for="email">Email:</label><input type="email" id="email" readonly="true" value="EXTRA@GMAIL.COM" name="email"><br>
-			<label for="senha">Senha:</label><input type="password" id="senha" value="Palmeiras" readonly="true" name="senha"><br>
-		</fieldset>
-		<input type="submit" value="Validar" id="botao"><br>
-	</form>
-	</fieldset>
+	</div>
 </body>
 </html>

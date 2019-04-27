@@ -106,3 +106,8 @@
 #senha{
   width: 365px;
 }
+
+#botao:hover{
+  color: white;
+  background-color: green;
+}

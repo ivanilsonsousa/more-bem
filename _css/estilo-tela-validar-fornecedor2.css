@@ -10,7 +10,7 @@
 	width: 520px;
 	height: auto;
 	position: absolute;
-	top: 60%;
+	top: 55%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
@@ -25,6 +25,8 @@
 }
 
 .site input[type='text']{
+  outline: none;
+  background-color: #ccc;
   margin: 10px;
   width: 350px;
   height: 30px;
@@ -38,7 +40,7 @@
   margin-bottom: 20px;
   border: 1px solid #444;
   position: relative;
-  left: 390px;
+  left: 340px;
 }
 
 .site input[type='submit']:hover{
@@ -73,6 +75,8 @@
 }
 
 .form-interno input[type='email'], input[type='password'], input[type='number'], input[type='tel']{
+  outline: none;
+  background-color: #ccc;
   margin: 10px;
   width: 200px;
   height: 30px;
@@ -110,11 +114,12 @@
   width: 365px;
 }
 
-#rsenha{
-  width: 310px;
-}
-
-#botao-cadastrar:hover{
+#botao-validar:hover{
   color: white;
   background-color: green;
+}
+
+#botao-negar:hover{
+  color: white;
+  background-color: red;
 }
