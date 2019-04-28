@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Login</title>
 	<link rel="shortcut icon" href="_imagens/icone.png">
-	<link rel="stylesheet" type="text/css" href="_css/d.css">
+	<link rel="stylesheet" type="text/css" href="_css/estilo-login.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>

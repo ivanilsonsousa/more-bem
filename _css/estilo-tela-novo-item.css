@@ -68,3 +68,8 @@
 #medida{
   width: 200px;
 }
+
+#botao:hover{
+  color: white;
+  background-color: green;
+}

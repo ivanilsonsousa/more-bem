@@ -10,7 +10,7 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
-		<title>Home - ADM</title>
+		<title>Home - Administrador</title>
 		<link rel="shortcut icon" href="_imagens/icone.png">
 		<link rel="stylesheet" type='text/css' href="_css/estilo-tela-inicial-adm.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">

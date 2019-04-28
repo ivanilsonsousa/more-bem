@@ -95,6 +95,7 @@
 
 #mais{
   position: relative;
+	left: 3px;
   top: 9px;
   cursor: pointer;
   opacity: 0.7;
