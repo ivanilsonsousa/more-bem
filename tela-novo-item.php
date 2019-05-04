@@ -11,6 +11,7 @@
 </head>
 <body>
 	<div class="site">
+	<i class="fas fa-box-open fa-4x"></i><i class="fas fa-plus fa-2x"></i><br><br>
 	<form method="POST" action="_controles/processa-cadastro-item.php">
 		<fieldset>
 		<legend id="legenda-redefinir-senha">Novo Item</legend>

@@ -30,8 +30,6 @@
         <!-- <a href="tela-ver-usuarios.php">Ver Usuarios</a> -->
         <!-- <a href="tela-novo-usuario.php">Adicionar Usuario</a> -->
 
-
-
 			</fieldset>
 		</div>
 
