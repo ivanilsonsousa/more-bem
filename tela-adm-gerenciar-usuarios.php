@@ -22,7 +22,7 @@
           <input class="blocoIcones" type="text" placeholder="Pesquisar...">
           <button class="blocoIcones"><i class="fas fa-search"></i></button>
         </div>
-        <div class="botao">
+        <div onclick="window.location.href='tela-adm-meu-perfil.php';" class="botao">
           <i class="fas fa-address-book"></i>
           <label>Meu Perfil</label>
         </div>

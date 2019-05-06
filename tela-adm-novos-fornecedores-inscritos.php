@@ -9,7 +9,7 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
-		<title>Gerenciar Fornecedores</title>
+		<title>Novos Fornecedores Inscritos</title>
 		<link rel="shortcut icon" href="_imagens/icone.png">
 		<link rel="stylesheet" type='text/css' href="_css/estilo-tela-gerenciar-fornecedores-adm.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">

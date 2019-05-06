@@ -39,14 +39,14 @@
 	<script type="text/javascript">
 		function funa(){
 			if (document.getElementById('senha').type == 'password') {
-            	document.getElementById('senha').type = 'text';
-            	var img = document.getElementById('olho');
-            	img.src = '_imagens/eye-slash-regular.svg';
-	        } else {
-	            document.getElementById('senha').type = 'password';
-	            var img = document.getElementById('olho');
-	            img.src = '_imagens/eye-regular.svg';
-	        }
+        	document.getElementById('senha').type = 'text';
+        	var img = document.getElementById('olho');
+        	img.src = '_imagens/eye-slash-regular.svg';
+      } else {
+          document.getElementById('senha').type = 'password';
+          var img = document.getElementById('olho');
+          img.src = '_imagens/eye-regular.svg';
+      }
 		}
 	</script>
 

@@ -10,7 +10,7 @@
 <head>
 	<title>Cadastrar Orçamento</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="_css/estilo-tela-novo-orcamento1.css">
+	<link rel="stylesheet" href="_css/estilo-tela-novo-orcamento.css">
 	<link rel="shortcut icon" href="_imagens/icone.png">
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">

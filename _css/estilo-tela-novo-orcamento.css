@@ -1,153 +1,177 @@
-fieldset {
-	width: 520px;
-	padding: 10px;
-	margin: auto auto auto auto;
+*{
+	padding: 0;
+	margin: 0;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
 }
 
-select {
-	height: 30px;
-	width: 180px;
-	position: relative;
-	outline: none;
-	left: 10px;
+.site {
+  background: #fff;
+	width: 580px;
+	height: auto;
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
-textarea {
-	resize: none;
-	outline: none;
-	margin: 0px;
-	border-radius: 5px;
-	position: relative;
-	left: 80px;
-	bottom: 10px;
-	border: 1px solid black;
+.site fieldset{
+  position: relative;
+  top: -20px;
+  height: auto;
+  padding: 10px;
+  border: 1px #888 solid;
+  border-radius: 0px;
 }
 
-input {
-	height: 30px;
-	width: 200px;
-	margin: 10px;
-	position: left;
-	border-radius: 5px;
-	border: 1px solid black;
-	font-size: 14pt;
-	padding: 0px 10px;
-	outline: none;
+.site input[type='text']{
+  margin: 10px;
+  width: 150px;
+  height: 30px;
+  padding: 0px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-weight: normal;
 }
 
-input[type=button] {
-	font-size: 13pt;
-	width: 100px;
-	cursor: pointer;
-	position: relative;
-	left: 390px;
-	margin: 10px 0px;
+.site input[type='submit']{
+  margin-bottom: 20px;
+  border: 1px solid #444;
+  position: relative;
+  left: 450px;
 }
 
-input[type=submit] {
-	cursor: pointer;
+.site input[type='button']{
+  border: 1px solid #444;
 }
 
-body {
-	font-family: arial;
-	font-size: 10pt;
+.site label{
+  font-weight: normal;
+  margin-left: 10px;
+  margin-right: 0px;
 }
 
-legend {
-	font-size: 16pt;
+.site i{
+  margin-right: 15px;
+}
+
+.site legend{
+	width: auto;
+  font-size: 18pt;
 	font-weight: bold;
 }
 
-#legenda-item, #legenda-dados-item {
-	font-size: 13pt;
-
+.form-interno{
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-#label-quant, #quant {
+.form-interno legend{
+  font-size: 12pt;
+}
+
+.form-interno input[type='email'], input[type='password'], input[type='number'], input[type='tel'], input[type='date'], select, option{
+  margin: 10px;
+  width: 150px;
+  height: 30px;
+  padding: 0px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-weight: normal;
+}
+
+.site textarea {
+	resize: none;
+	padding: 10px;
+	width: 80%;
+	border-radius: 5px;
 	position: relative;
-	left: 97px;
+	left: 100px;
+	top: -25px;
+  font-weight: normal;
 }
 
+/* TABELA DE ITENS */
 
-#label-medida, #medida {
+.tabela{
+	/* height: 10%; */
+  height: 200px;
 	position: relative;
-	left: 21px;
+	top: 0px;
 }
 
-#descricao {
+.tabela table {
+	width: 98%;
+	height: 60%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
 	position: relative;
-	padding: 0px;
-	top: 10px;
-}
-
-#marca {
-	width: 150px;
-}
-
-#medida {
-	width: 100px;
-}
-
-#campo-item {
-	padding: 20px;
-}
-
-#dados-item {
-	height: 200px;
-}
-
-.form-interno {
-	margin: 20px 0px;
-	width: 500px;
-}
-
-#selecionar-item {
-	margin: 10px 0px;
-}
-
-#botao {
-	font-size: 13pt;
-	width: 100px;
-	position: relative;
-	left: 413px;
-	margin: 10px 10px;
-}
-
-#titulo {
-	width: 180px;
-}
-
-#prazo {
-	width: 165px;
-}
-
-#quant {
-	width: 50px;
-}
-
-#label-prazo, #prazo {
-	position: relative;
-	right: 3px;
-}
-
-table {
-	padding: 0px;
-	position: relative;
-	border-collapse: collapse;
 	margin: auto auto;
 	text-align: center;
-	width: 450px;
 }
 
-td, tr {
-	padding: 0px 20px;
+.tabela td, tr {
+	padding: 0px 10px;
 }
 
-h2 {
-	text-align: center;
-	margin: 10px 0px;
+.tabela td{
+	font-weight: normal;
 }
 
-tr:nth-child(even) {
-	background: #ddd;
+/* FIM TABELA DE ITENS */
+
+#selecionar-item{
+    margin-top: 5px;
+}
+
+#prazo{
+  width: 170px;
+}
+
+#quant{
+  width: 100px;
+}
+
+#titulo{
+  width: 210px;
+}
+
+#marca{
+  width: 168px;
+}
+
+#medida{
+  width: 130px;
+}
+
+#label-quant, #quant{
+  position: relative;
+  left: 15px;
+}
+
+#label-marca, #marca{
+  position: relative;
+  left: 25px;
+}
+
+#botao-cadastrar:hover{
+  color: white;
+  background-color: green;
+}
+
+#botao-inserir{
+  position: relative;
+  left: 400px;
+  margin: 10px;
+}
+
+#seletor{
+  margin: 10px;
+}
+
+#botao-inserir:hover{
+  color: white;
+  background-color: orange;
 }

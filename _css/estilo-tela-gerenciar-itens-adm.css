@@ -7,7 +7,7 @@
 
 .site {
   background: #fff;
-	width: 650px;
+	width: 700px;
 	height: 500px;
 	position: absolute;
 	top: 50%;
@@ -24,9 +24,14 @@
   border-radius: 0px;
 }
 
-.barra-pesquisa{
+/* .barra-pesquisa{
   margin: 0px 10px;
   padding: 0px 10px;
+	width: 92%;
+
+	position: relative;
+	margin: auto auto;
+
   height: 50px;
   border: 1px #888 solid;
   border-radius: 4px;
@@ -36,7 +41,7 @@
   background: none;
   padding: 3px;
   border-radius: 4px;
-}
+} */
 
 .site i{
   margin-right: 15px;
@@ -48,6 +53,7 @@
 }
 
 .site legend{
+	width: auto;
   font-family: 'Nunito', sans-serif;
   font-size: 18pt;
 	font-weight: bold;
@@ -80,6 +86,7 @@
   margin-right: 15px;
 }
 
+
 /* BTN COLORES */
 .btn-primary{
   border-color: #999999;
@@ -93,15 +100,14 @@
 	color: black;
 }
 
-#mais{
+#lixo{
   position: relative;
-  top: 9px;
-  cursor: pointer;
-  opacity: 0.7;
+  left: 5px;
 }
 
-#mais:hover{
-  opacity: 1;
+#lapis{
+  position: relative;
+  left: 5px;
 }
 
 #div-pesquisa{
@@ -155,7 +161,7 @@
   height: 35px;
 
   position: relative;
-  left: 500px;
+  left: 550px;
   top: 0px;
 }
 
@@ -168,27 +174,32 @@
   cursor: pointer;
   font-size: 9px;
   position: relative;
-  top: -30px;
-  right: 3px;
+  top: -32px;
+  left: -5px;
 }
 
 .botao i{
   cursor: pointer;
   position: relative;
-  top: -27px;
-  left: 10px;
+  top: -29px;
+  left: 9px;
 }
 
-/* TABELA DE ITENS */
+/* TABELA DE FORNECEDORES */
 
 .tabela{
-	height: 60%;
+	margin: 0;
+	height: 50%;
+	width: 100%;
 	position: relative;
-	top: 50px;
+	top: 0px;
+	left: 5px;
+	/* border: 1px solid #ccc; */
+	/* border-radius: 10px; */
 }
 
 .tabela table {
-	width: 90%;
+	width: 95%;
 	height: 90%;
 	padding: 10px;
 	border: 1px solid #ccc;
@@ -198,12 +209,12 @@
 	text-align: center;
 }
 
-.tabela td, tr {
-	padding: 0px 10px;
+.tabela1 td, tr {
+	padding: 0px 5px;
 }
 
 .tabela td{
 	font-weight: normal;
 }
 
-/* FIM TABELA DE ITENS */
+/* FIM TABELA DE FORNECEDORES */
