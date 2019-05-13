@@ -1,9 +1,9 @@
 <?php
-    session_start();
-	if (!isset($_SESSION['idforn'])) {
-		header("location: index.php");
-		exit;
-	}
+  session_start();
+  if (!isset($_SESSION['idforn'])) {
+    header("location: index.php");
+    exit;
+  }
 ?>
 
 <!DOCTYPE html>
@@ -25,8 +25,8 @@
 			<fieldset>
 				<legend>Ações</legend><br>
 				<button type="button" onclick="window.location.href='tela-adm-gerenciar-usuarios.php';" class="btn btn-primary"><i class="fas fa-cogs fa-2x"></i><i class="fas fa-address-card fa-2x"></i><br><br><label>Gerenciar Usuários</label></button>
-				<button type="button" onclick="window.location.href='tela-novo-orcamento.php';" class="btn btn-primary"><i class="fas fa-cogs fa-2x"></i><i class="fas fa-bars fa-2x"></i><br><br><label>Gerenciar Orçamentos</label></button>
-				<button type="button" class="btn btn-primary"><i class="fas fa-cogs fa-2x"></i><i class="fas fa-wallet fa-2x"></i><br><br><label>Gerenciar Ofertas</label></button><br><br>
+				<button type="button" onclick="window.location.href='tela-adm-gerenciar-orcamentos.php';" class="btn btn-primary"><i class="fas fa-cogs fa-2x"></i><i class="fas fa-bars fa-2x"></i><br><br><label>Gerenciar Orçamentos</label></button>
+				<button type="button" onclick="window.location.href='tela-adm-gerenciar-ofertas.php';" class="btn btn-primary"><i class="fas fa-cogs fa-2x"></i><i class="fas fa-wallet fa-2x"></i><br><br><label>Gerenciar Ofertas</label></button><br><br>
 				<button type="button" onclick="window.location.href='tela-adm-gerenciar-fornecedores.php';" class="btn btn-primary"><i class="fas fa-cogs fa-2x"></i><i class="fas fa-user-tie fa-2x"></i><br><br><label>Gerenciar Fornecedores</label></button>
 				<button type="button" class="btn btn-primary"><i class="fas fa-comments fa-2x"></i><br><br><label>Mensagens</label></button>
 				<button type="button" onclick="window.location.href='tela-adm-gerenciar-itens.php';" class="btn btn-primary"><i class="fas fa-cogs fa-2x"></i><i class="fas fa-list-ul fa-2x"></i><br><br><label>Gerenciar Itens</label></button>

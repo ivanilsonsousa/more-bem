@@ -9,6 +9,10 @@
 	<link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<script src="_scripts/jquery-3.4.1.min.js"></script>
+	<script src="_scripts/jquery.mask.js"></script>
+
 </head>
 <body>
 	<div class="site">
@@ -38,5 +42,11 @@
 		</form>
 		</fieldset>
 	</div>
+
+	<script>
+		$(document).ready(function(){
+			$('#cpf').mask("000.000.000-00", {placeholder: "000.000.000-00"})
+		});
+	</script>
 </body>
 </html>

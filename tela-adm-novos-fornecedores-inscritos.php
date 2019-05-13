@@ -19,18 +19,18 @@
 	</head>
 	<body>
 		<div class="site">
-      <i class="fas fa-cogs fa-5x"></i><i class="fas fa-user-tie fa-3x"></i><br><br>
-			<fieldset id="form-content">
+      <i class="fas fa-cogs fa-4x"></i><i class="fas fa-user-tie fa-2x"></i><br><br>
+			<fieldset>
 				<legend id="legenda">Novos Fornecedores Inscritos</legend><br>
         <div class="barra-pesquisa">
         </div>
-				<div id="div-pesquisa" class="bloco-pesquisa">
-          <input type="text" placeholder="Pesquisar...">
-          <button><i class="fas fa-search"></i></button>
+				<div id="div-pesquisa" class="blocoIcones">
+          <input class="blocoIcones" type="text" placeholder="Pesquisar...">
+          <button class="blocoIcones"><i class="fas fa-search"></i></button>
         </div>
 				<div class="tabela table-responsive thead-dark table-striped">
 					<table class="tabela table table-hover">
-						<thead class="thead-dark">
+						<thead>
 							<tr>
 								<th>Razão Social</th>
 								<th>Detalhes</th>

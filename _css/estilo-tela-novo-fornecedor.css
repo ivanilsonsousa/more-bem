@@ -95,7 +95,12 @@
 }
 
 #tel{
-  width: 150px;
+  width: 160px;
+}
+
+#label-tel, #tel{
+	position: relative;
+	right: 10px;
 }
 
 #num{

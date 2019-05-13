@@ -40,6 +40,16 @@ svg{ width: 25px; height: 25px; }
 
 .blocoIcones button:hover svg{ fill: #000; }
 
+a {
+	font-size: 10px;
+	width: 100px;
+}
+
+img {
+    max-width: 290px;
+    width: auto;
+}
+
 #site {
 	width: 700px;
 	height: 250px;
@@ -141,12 +151,14 @@ svg{ width: 25px; height: 25px; }
 	top: -95px;
 }
 
-a {
-	font-size: 10px;
-	width: 100px;
+footer{
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
 }
 
-img {
-    max-width: 290px;
-    width: auto;
+span{
+	width: auto;
+	position: relative;
+	left: 40%;
 }

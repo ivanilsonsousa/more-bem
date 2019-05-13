@@ -9,7 +9,7 @@
 		public function abrir($nome, $host, $usuario, $senha){
 			global $pdo;
 			global $msgErro;
-			
+
 			$dsn = "mysql:host=$host;dbname=$nome;charset=utf8";
 
 			try {
@@ -26,12 +26,9 @@
 			$sql->bindValue(":e", $email);
 			$sql->execute();
 
-			if($sql->rowCount() > 0)
-			{
+			if($sql->rowCount() > 0){
 				return true; //ja cadastrado
-			}
-			else
-			{
+			} else {
 				return false; //pode cadastrar
 			}
 		}
@@ -51,7 +48,7 @@
 				$sql->bindValue(":e", $f->getEmail());
 				$sql->bindValue(":s", md5($f->getSenha()));
 				$sql->execute();
-					
+
 			} catch (Exception $e) {
 				$msgErro = $e->getMessage();
 				//echo "ERRRRRRRRRO <br>".$msgErro;
@@ -66,7 +63,7 @@
 				$sql = $pdo->prepare("SELECT * FROM fornecedor ORDER BY idforn ASC");
 				$sql->execute();
 				return $sql;
-				
+
 			} catch (Exception $e) {
 				$msgErro = $e->getMessage();
 			}
@@ -103,9 +100,9 @@
 				$sql->bindValue(":e", $f->getEmail());
 				$sql->bindValue(":s", md5($f->getSenha()));
 				$sql->bindValue(":id", $f->getIdForn());
-				
+
 				$sql->execute();
-					
+
 			} catch (Exception $e) {
 				$msgErro = $e->getMessage();
 				//echo "<br>ERRRRRRRRRO <br>".$msgErro;
@@ -122,7 +119,40 @@
 				$sql->bindValue(":mar", $i->getMarca());
 				$sql->bindValue(":med", $i->getMedida());
 				$sql->execute();
-					
+
+			} catch (Exception $e) {
+				$msgErro = $e->getMessage();
+				//echo "ERRRRRRRRRO <br>".$msgErro;
+			}
+		}
+
+		public function editarItem($i){
+			global $pdo;
+			global $msgErro;
+
+			try {
+				$sql = $pdo->prepare("UPDATE item SET material = :mat, marca = :mar, medida = :med WHERE id = :id");
+				$sql->bindValue(":mat", $i->getMaterial());
+				$sql->bindValue(":mar", $i->getMarca());
+				$sql->bindValue(":med", $i->getMedida());
+				$sql->bindValue(":id", $i->getId());
+				$sql->execute();
+
+			} catch (Exception $e) {
+				$msgErro = $e->getMessage();
+				//echo "ERRRRRRRRRO <br>".$msgErro;
+			}
+		}
+
+		public function apagarItem($id){
+			global $pdo;
+			global $msgErro;
+
+			try {
+				$sql = $pdo->prepare("DELETE FROM item WHERE id = :id");
+				$sql->bindValue(":id", $id);
+				$sql->execute();
+
 			} catch (Exception $e) {
 				$msgErro = $e->getMessage();
 				//echo "ERRRRRRRRRO <br>".$msgErro;
@@ -137,7 +167,7 @@
 				$sql = $pdo->prepare("SELECT * FROM item ORDER BY id ASC");
 				$sql->execute();
 				return $sql;
-				
+
 			} catch (Exception $e) {
 				$msgErro = $e->getMessage();
 			}
@@ -153,7 +183,7 @@
 				$sql->execute();
 				$dado = $sql->fetch(PDO::FETCH_ASSOC);
 				return $dado;
-				
+
 			} catch (Exception $e) {
 				$msgErro = $e->getMessage();
 			}
@@ -175,5 +205,5 @@
 			} else {
 				return false; //nao foi possivel logar
 			}
-		}	
+		}
 	}

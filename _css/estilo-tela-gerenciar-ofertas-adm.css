@@ -7,7 +7,7 @@
 
 .site {
   background: #fff;
-	width: 700px;
+	width: 730px;
 	height: 500px;
 	position: absolute;
 	top: 50%;
@@ -18,20 +18,15 @@
 .site fieldset{
   position: relative;
   top: -20px;
-  height: 400px;
+  height: 450px;
   padding: 10px;
   border: 1px #888 solid;
   border-radius: 0px;
 }
 
-/* .barra-pesquisa{
-  margin: 0px 10px;
+.barra-pesquisa{
+  margin: 0px 20px;
   padding: 0px 10px;
-	width: 92%;
-
-	position: relative;
-	margin: auto auto;
-
   height: 50px;
   border: 1px #888 solid;
   border-radius: 4px;
@@ -41,7 +36,7 @@
   background: none;
   padding: 3px;
   border-radius: 4px;
-} */
+}
 
 .site i{
   margin-right: 15px;
@@ -86,7 +81,6 @@
   margin-right: 15px;
 }
 
-
 /* BTN COLORES */
 .btn-primary{
   border-color: #999999;
@@ -100,20 +94,22 @@
 	color: black;
 }
 
-#lixo{
+#pontos{
   position: relative;
-  left: 5px;
+	left: 62 0px;
+  top: 9px;
+  cursor: pointer;
+  opacity: 0.7;
 }
 
-#lapis{
-  position: relative;
-  left: 5px;
+#pontos:hover{
+  opacity: 1;
 }
 
 #div-pesquisa{
   position: relative;
-  top: 0px;
-  left: 30px;
+  top: -42px;
+  left: 50px;
 }
 
 .blocoIcones {
@@ -141,7 +137,6 @@
 	height: 100%;
 	border-radius: 0px;
   border: none;
-	/* background: #ccc; */
   background: transparent;
 	cursor: pointer;
 }
@@ -162,7 +157,7 @@
 
   position: relative;
   left: 550px;
-  top: 0px;
+  top: -42px;
 }
 
 .botao:hover{
@@ -170,43 +165,40 @@
 }
 
 .botao label{
-  display: inline-block;
   cursor: pointer;
-  font-size: 9px;
+  font-size: 10px;
   position: relative;
-  top: -32px;
-  left: -5px;
+  top: -45px;
+  left: 2px;
 }
 
 .botao i{
   cursor: pointer;
   position: relative;
-  top: -29px;
-  left: 9px;
+  top: -33px;
+  left: 42px;
 }
 
-/* TABELA DE FORNECEDORES */
+/* TABELA DE ORÇAMENTOS*/
 
 .tabela{
 	margin: 0;
-	height: 50%;
-	width: 100%;
-	position: relative;
-	top: 0px;
-	left: 5px;
+	height: 60%;
+	width: 95%;
+	/* margin-left: 10px; */
 	/* border: 1px solid #ccc; */
 	/* border-radius: 10px; */
 }
 
 .tabela table {
-	width: 95%;
+	width: 96.5%;
 	height: 90%;
-	padding: 10px;
+	/* padding: 10px; */
 	border: 1px solid #ccc;
-	border-radius: 10px;
-	position: relative;
 	margin: auto auto;
 	text-align: center;
+	position: relative;
+	left: 5px;
 }
 
 .tabela1 td, tr {
@@ -217,4 +209,4 @@
 	font-weight: normal;
 }
 
-/* FIM TABELA DE FORNECEDORES */
+/* FIM TABELA DE ORÇAMENTOS */

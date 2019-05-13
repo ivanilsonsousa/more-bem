@@ -6,7 +6,10 @@
 	<link rel="shortcut icon" href="_imagens/icone.png">
 	<link rel="stylesheet" type="text/css" href="_css/estilo-login.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+	<script type="text/javascript" src="_scripts/funcoes.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
 <body>
 	<div id="site">
@@ -25,7 +28,7 @@
 		<div class="blocoIcones" id="div-senha">
 			<input type="password" name="senha" id="senha" placeholder="Digite a senha...">
 			<i id="lock" class="fas fa-lock"></i>
-			<i><img id="olho" onclick="funa()" src="_imagens/eye-regular.svg"></i>
+			<i><img id="olho" onclick="mostrarTexto()" src="_imagens/eye-regular.svg"></i>
 		</div>
 		<button type="submit" id="botao">Confirmar</button>
 	</form>
@@ -35,20 +38,8 @@
 	</div>
 	</fieldset>
 	</div>
-
-	<script type="text/javascript">
-		function funa(){
-			if (document.getElementById('senha').type == 'password') {
-        	document.getElementById('senha').type = 'text';
-        	var img = document.getElementById('olho');
-        	img.src = '_imagens/eye-slash-regular.svg';
-      } else {
-          document.getElementById('senha').type = 'password';
-          var img = document.getElementById('olho');
-          img.src = '_imagens/eye-regular.svg';
-      }
-		}
-	</script>
-
+	<footer>
+		<span><script> document.write(ano())</script> &#169; Todos os diretos reservados by <strong>Scorpion</strong></span>
+	</footer>
 </body>
 </html>

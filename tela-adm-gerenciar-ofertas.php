@@ -9,41 +9,37 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
-		<title>Gerenciar Fornecedores</title>
+		<title>Gerenciar Ofertas</title>
 		<link rel="shortcut icon" href="_imagens/icone.png">
-		<link rel="stylesheet" type='text/css' href="_css/estilo-tela-gerenciar-fornecedores-adm.css">
+		<link rel="stylesheet" type='text/css' href="_css/estilo-tela-gerenciar-ofertas-adm.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+		<link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-		<link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
 	</head>
 	<body>
-
 		<div class="site">
-      <i class="fas fa-cogs fa-4x"></i><i class="fas fa-user-tie fa-2x"></i><br><br>
-			<fieldset id="form-content">
-				<legend>Gerenciar Fornecedores</legend><br>
+      <i class="fas fa-cogs fa-4x"></i><i class="fas fa-wallet fa-2x"></i><br><br>
+			<fieldset>
+				<legend id="legenda">Gerenciar Ofertas</legend><br>
         <div class="barra-pesquisa">
+					<i id="pontos" title="Adicionar Orçamento" class="fas fa-ellipsis-v fa-2x"></i>
         </div>
-        <div id="div-pesquisa" class="blocoIcones">
+
+				<div id="div-pesquisa" class="blocoIcones">
           <input class="blocoIcones" type="text" placeholder="Pesquisar...">
           <button class="blocoIcones"><i class="fas fa-search"></i></button>
         </div>
-				<div onclick="window.location.href='tela-adm-novos-fornecedores-inscritos.php';" class="botao">
-          <i class="fas fa-suitcase"></i>
-          <label>Validar Fornecedores</label>
-        </div>
-
-				<div class="tabela table-responsive">
+				<div class="tabela table-responsive thead-dark table-striped">
 					<table class="tabela table table-hover">
 						<thead>
 							<tr>
-								<th>Razão Social</th>
-								<th>Rua</th>
-								<th>Número</th>
-								<th>Telefone</th>
-								<th>Apagar</th>
+								<th>Descrição</th>
+								<th>Detalhes</th>
+								<th>Fornecedor</th>
+								<th>Status</th>
+								<th>Prazo</th>
+								<th>Excluir</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -52,6 +48,9 @@
 								while($dado = $lista->fetch(PDO::FETCH_ASSOC)) {?>
 									<tr>
 										<td><?php echo $dado['rsocial'];?></td>
+										<td>
+											<a href="tela-validar-fornecedor.php" title="Mostrar mais detalhes" class "bnt"><i class="fas fa-info-circle"></i></a>
+										</td>
 										<td><?php echo $dado['rua'];?></td>
 										<td><?php echo $dado['num'];?></td>
 										<td><?php echo $dado['tel'];?></td>
@@ -64,8 +63,8 @@
 						</tbody>
 					</table>
 				</div>
+
 			</fieldset>
 		</div>
-
 	</body>
 </html>
