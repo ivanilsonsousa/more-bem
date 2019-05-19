@@ -10,13 +10,13 @@
 <head>
 	<title>Cadastrar Orçamento</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="_css/estilo-tela-novo-orcamento.css">
 	<link rel="shortcut icon" href="_imagens/icone.png">
+	<link rel="stylesheet" href="_css/estilo-tela-novo-orcamento.css">
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
-	<link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 	<script type="text/javascript" src="_scripts/funcoes.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -41,6 +41,7 @@
 					$lista = $bd->listarTodosOsItens();
 					while($dado = $lista->fetch(PDO::FETCH_ASSOC)) {?>
 						<option><?php echo $dado['material'];?></option>
+						<option hidden> <?php echo $dado['id']; ?></option>
 				<?php
 					} ?>
 
@@ -66,7 +67,6 @@
 
 					<?php
 						$lista = $bd->listarTodosOsItens();
-
 						while($dado = $lista->fetch(PDO::FETCH_ASSOC)) {?>
 							<tr>
 								<td><?php echo $dado['id'];?></td>

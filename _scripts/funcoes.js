@@ -1,10 +1,11 @@
-function ano(){
-	now = new Date()
-	return now.getFullYear()
-}
-
+/* --- Descrição da função preenche() ---
+	Essa função pega o item selecionado no momento
+	da criação de um novo Orçamento no evento de
+	clique do elemento <select> dentro do fieldset
+*/
 function preenche(){
-	var indice = document.getElementById("seletor").selectedIndex;
+	var sel = document.getElementById("seletor")
+	var indice = sel.options[sel.selectedIndex + 1].text
 
     $.ajax({
 		type: 'POST',
@@ -26,6 +27,9 @@ function preenche(){
 	});
 }
 
+/*--- Descrição da função mostrarTexto() ---
+	Essa função exibe o texto da tela de login do campo senha ao clicar no icone de olho.
+*/
 function mostrarTexto(){
 	if (document.getElementById('senha').type == 'password') {
 			document.getElementById('senha').type = 'text';
@@ -38,11 +42,19 @@ function mostrarTexto(){
 	}
 }
 
+function ano(){
+	now = new Date()
+	return now.getFullYear()
+}
+
 // --- FUNÇÕES JQUERY ---
-$(document).ready(function(){
-	$('#cnpj').mask('00.000.000/0000-00', {reverse: true})
-	$('#cep').mask("00.000-000", {placeholder: "00.000-000"})
-	$('#tel').mask("(00) 0 0000-0000", {placeholder: "(00) 0 0000-0000"})
-});
+{
+	$(document).ready(function(){
+		$('#cnpj').mask('00.000.000/0000-00', {reverse: true})
+		$('#cep').mask("00.000-000", {placeholder: "00.000-000"})
+		$('#tel').mask("(00) 0 0000-0000", {placeholder: "(00) 0 0000-0000"})
+	});
+
+}
 
 // --- FIM FUNÇÕES JQUERY ---

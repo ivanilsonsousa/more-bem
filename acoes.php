@@ -5,8 +5,8 @@
 		$bd = new BD();
 		$bd->abrir("meubanco", "localhost", "root", "");
 
-    	$indice = $_POST['indice'];
-			$dado = $bd->listarItem($indice);
+    $indice = $_POST['indice'];
+		$dado = $bd->listarItem($indice);
 
 		$item = array($dado['id'], $dado['marca'], $dado['medida']);
 		echo "$item[0]&$item[1]&$item[2]";
