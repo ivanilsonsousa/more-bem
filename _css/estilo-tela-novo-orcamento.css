@@ -175,3 +175,12 @@
   color: white;
   background-color: orange;
 }
+
+#botao-apagar{
+	color: red;
+	cursor: pointer;
+}
+
+#botao-apagar:hover{
+	opacity: 0.7;
+}

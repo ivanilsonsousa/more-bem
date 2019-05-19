@@ -39,7 +39,7 @@
 	</fieldset>
 	</div>
 	<footer>
-		<span><script> document.write(ano())</script> &#169; Todos os diretos reservados by <strong>Scorpion</strong></span>
+		<span>&#169; <script> document.write(ano())</script> Todos os direitos reservados by <strong>Scorpion, Inc.</strong></span>
 	</footer>
 </body>
 </html>

@@ -48,37 +48,23 @@
 			</select>
 			<label id="label-marca" for="marca">Marca:</label><input type="text" id="marca" name="marca" readonly="true">
 			<label id="label-medida" for="medida">Unid. de Medida:</label><input type="text" id="medida" name="medida" readonly="true">
-			<label id="label-quant" for="num">Quantidade:</label><input type="number" id="quant" name="quant" min="1"><br>
+			<label id="label-quant" for="num">Quantidade:</label><input type="number" id="quant" name="quant" value="1" min="1"><br>
 			<input type="hidden" id="id-item">
-			<input class="btn btn-default" type="button" value="Adicionar" id="botao-inserir">
+			<input class="btn btn-default" type="button" value="Adicionar" id="botao-inserir" onclick='inserirLinhaTabela()'>
 		</fieldset>
 
 		<fieldset id="dados-item" class="form-interno">
 		<legend id="legenda-dados-item">Itens</legend>
 		<div class="tabela table-responsive">
-			<table class="tabela table table-hover">
+			<table id="tabela" class="tabela table table-hover">
 				<tr>
 					<th>Id</th>
 					<th>Material</th>
 					<th>Marca</th>
-					<th>Unidade de Medida</th>
+					<th>Unid. de Med.</th>
+					<th>Quant.</th>
 					<th>Excluir</th>
 				</tr>
-
-					<?php
-						$lista = $bd->listarTodosOsItens();
-						while($dado = $lista->fetch(PDO::FETCH_ASSOC)) {?>
-							<tr>
-								<td><?php echo $dado['id'];?></td>
-								<td><?php echo $dado['material'];?></td>
-								<td><?php echo $dado['marca'];?></td>
-								<td><?php echo $dado['medida'];?></td>
-								<td>
-									<a href="#" title="Apagar" class "bnt"><i class="far fa-times-circle"></i></a>
-								</td>
-							</tr>
-					<?php
-						} ?>
 
 			</table>
 		</div>
