@@ -33,8 +33,8 @@
 				<label for="email">Email:</label><input type="email" id="email" readonly="true" name="email"><br>
 				<label for="senha">Senha:</label><input type="password" id="senha" readonly="true" name="senha"><br>
 			</fieldset>
-			<input class="btn btn-default" type="submit" value="Validar" id="botao-validar">
-			<input class="btn btn-default" type="submit" value="Negar" id="botao-negar"><br>
+			<input class="btn btn-success" type="submit" value="Validar" id="botao-validar">
+			<input class="btn btn-danger" type="submit" value="Negar" id="botao-negar"><br>
 		</form>
 		</fieldset>
 	</div>

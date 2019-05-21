@@ -171,11 +171,6 @@
   margin: 10px;
 }
 
-#botao-inserir:hover{
-  color: white;
-  background-color: orange;
-}
-
 #botao-apagar{
 	color: red;
 	cursor: pointer;

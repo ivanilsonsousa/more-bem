@@ -30,7 +30,7 @@
 				<label for="senha">Senha:</label><input type="password" id="senha" name="senha"><br>
 				<label for="rsenha">Repetir Senha:</label><input type="password" id="rsenha" name="rsenha"><br>
 			</fieldset>
-			<input class="btn btn-default" type="submit" value="Salvar" id="botao"><br>
+			<input class="btn btn-success" type="submit" value="Salvar" id="botao"><br>
 		</form>
 		</fieldset>
 	</div>

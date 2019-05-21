@@ -111,7 +111,6 @@ img {
 	top: 15px;
 }
 
-
 #label-senha {
 	position: relative;
 	right: 260px;
@@ -120,9 +119,7 @@ img {
 
 #botao {
 	cursor: pointer;
-
-  background-color: #444444;
-
+  	background-color: #3c4888;
 	border-radius: 5px;
 	margin: 10px 10px;
 	width: 80px;

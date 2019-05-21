@@ -39,7 +39,7 @@
 			<label for="marca" id="label-marca">Marca:</label><input type="text" name="marca" id="marca" value="<?php echo $i->getMarca();?>"><br><br>
 			<label for="medida">Unidade de Medida:</label><input name="medida" type="text" id="medida" value="<?php echo $i->getMedida();?>"><br>
 
-		<input class="btn btn-default" type="submit" value="Editar" id="botao"><br>
+		<input class="btn btn-success" type="submit" value="Editar" id="botao"><br>
 		</fieldset>
 	</form>
 </div>

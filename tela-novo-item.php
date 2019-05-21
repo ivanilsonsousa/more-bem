@@ -20,7 +20,7 @@
 			<label for="marca" id="label-marca">Marca:</label><input type="text" name="marca" id="marca"><br><br>
 			<label for="medida">Unidade de Medida:</label><input name="medida" type="text" id="medida"><br>
 
-		<input class="btn btn-default" type="submit" value="Salvar" id="botao"><br>
+		<input class="btn btn-success" type="submit" value="Salvar" id="botao"><br>
 		</fieldset>
 	</form>
 </div>

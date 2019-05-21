@@ -18,7 +18,7 @@
 			<label for="nova-senha">Nova Senha:</label><input type="password" id="nova-senha"><br><br>
 			<label for="repetir-senha">Repetir Senha:</label><input type="password" id="repetir-senha"><br>
 
-			<input class="btn btn-default" type="submit" value="Enviar" id="botao"><br>
+			<input class="btn btn-success" type="submit" value="Enviar" id="botao"><br>
 		</fieldset>
 	</form>
 </div>

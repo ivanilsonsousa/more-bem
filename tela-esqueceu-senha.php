@@ -16,7 +16,7 @@
 		<fieldset>
 		<legend id="legenda-redefinir-senha">Redefinir Senha</legend>
 			<label for="email">Email:</label><input type="email" id="email" name="email"><br>
-			<input class="btn btn-default" type="submit" value="Enviar" id="botao"><br>
+			<input class="btn btn-success" type="submit" value="Enviar" id="botao"><br>
 		</fieldset>
 	</form>
 </div>

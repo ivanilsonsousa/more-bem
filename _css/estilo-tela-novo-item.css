@@ -39,11 +39,6 @@
   left: 410px;
 }
 
-.site input[type='submit']:hover{
-  background-color: #999;
-  color: black;
-}
-
 .site label{
   font-weight: normal;
   margin-left: 10px;
@@ -67,9 +62,4 @@
 
 #medida{
   width: 200px;
-}
-
-#botao:hover{
-  color: white;
-  background-color: green;
 }

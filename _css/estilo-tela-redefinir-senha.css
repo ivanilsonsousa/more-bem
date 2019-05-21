@@ -40,11 +40,6 @@
 	top: 20px;
 }
 
-.site input[type='submit']:hover{
-  color: white;
-  background-color: green;
-}
-
 .site label{
   font-weight: normal;
   margin-left: 10px;

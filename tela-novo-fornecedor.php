@@ -38,7 +38,7 @@
 				<label for="senha">Senha:</label><input type="password" id="senha" name="senha"><br>
 				<label for="rsenha">Repetir Senha:</label><input type="password" id="rsenha" name="rsenha"><br>
 			</fieldset>
-			<input class="btn btn-default" type="submit" value="Cadastrar" id="botao-cadastrar"><br>
+			<input class="btn btn-success" type="submit" value="Cadastrar" id="botao-cadastrar"><br>
 		</form>
 		</fieldset>
 	</div>

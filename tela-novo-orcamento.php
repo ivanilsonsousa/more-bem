@@ -50,7 +50,7 @@
 			<label id="label-medida" for="medida">Unid. de Medida:</label><input type="text" id="medida" name="medida" readonly="true">
 			<label id="label-quant" for="num">Quantidade:</label><input type="number" id="quant" name="quant" value="1" min="1"><br>
 			<input type="hidden" id="id-item">
-			<input class="btn btn-default" type="button" value="Adicionar" id="botao-inserir" onclick='inserirLinhaTabela()'>
+			<input class="btn btn-danger" type="button" value="Adicionar" id="botao-inserir" onclick='inserirLinhaTabela()'>
 		</fieldset>
 
 		<fieldset id="dados-item" class="form-interno">
@@ -69,7 +69,7 @@
 			</table>
 		</div>
 		</fieldset>
-		<input class="btn btn-default" type="submit" value="Cadastrar" id="botao-cadastrar">
+		<input class="btn btn-success" type="submit" value="Cadastrar" id="botao-cadastrar">
 	</form>
 	</fieldset>
 </div>
