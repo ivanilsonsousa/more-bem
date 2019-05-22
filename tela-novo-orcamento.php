@@ -28,13 +28,12 @@
 	<fieldset id="campo-item">
 	<legend id="legenda">Cadastrar Orçamento</legend>
 	<form method="POST" action="_controles/processa-novo-orcamento.php">
-
 		<label for="titulo">Título:</label> <input type="text" id="titulo" name="titulo">
 		<label for="prazo" id="label-prazo">Prazo:</label> <input type="date" id="prazo" name="prazo"><br>
 		<label for="texto" id="descricao">Descrição:</label><br><textarea cols="50" rows="4" maxlength="180" placeholder="Digite uma descrição..."></textarea>
 
 		<fieldset id="selecionar-item" class="form-interno"><legend id="legenda-item">Selecionar Item</legend>
-			<label>Material:</label><select id="seletor" onchange="preenche()">
+			<label>Material:</label><select id="seletor" onchange="preencher()">
 				<option>Selecione...</option>
 
 				<?php
@@ -48,9 +47,9 @@
 			</select>
 			<label id="label-marca" for="marca">Marca:</label><input type="text" id="marca" name="marca" readonly="true">
 			<label id="label-medida" for="medida">Unid. de Medida:</label><input type="text" id="medida" name="medida" readonly="true">
-			<label id="label-quant" for="num">Quantidade:</label><input type="number" id="quant" name="quant" value="1" min="1"><br>
+			<label id="label-quant" for="num">Quantidade:</label><input type="number" id="quant" name="quant" min="1"><br>
 			<input type="hidden" id="id-item">
-			<input class="btn btn-danger" type="button" value="Adicionar" id="botao-inserir" onclick='inserirLinhaTabela()'>
+			<input class="btn btn-danger" type="button" disabled="true" value="Adicionar" id="botao-inserir" onclick='inserirLinhaTabela()'>
 		</fieldset>
 
 		<fieldset id="dados-item" class="form-interno">
@@ -65,9 +64,9 @@
 					<th>Quant.</th>
 					<th>Excluir</th>
 				</tr>
-
 			</table>
 		</div>
+		<a id="link-itens" href="tela-adm-gerenciar-itens.php">Gerenciar Itens</a>
 		</fieldset>
 		<input class="btn btn-success" type="submit" value="Cadastrar" id="botao-cadastrar">
 	</form>

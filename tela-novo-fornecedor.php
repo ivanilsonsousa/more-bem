@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
+	<script type="text/javascript" src="_scripts/funcoes.js"></script>
 	<script src="_scripts/jquery-3.4.1.min.js"></script>
 	<script src="_scripts/jquery.mask.js"></script>
 

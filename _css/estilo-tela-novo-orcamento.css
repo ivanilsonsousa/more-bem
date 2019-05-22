@@ -10,7 +10,7 @@
 	width: 580px;
 	height: auto;
 	position: absolute;
-	top: 75%;
+	top: 80%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
@@ -103,7 +103,7 @@
 
 .tabela table {
 	width: 98%;
-	height: 60%;
+	height: 96%;
 	padding: 10px;
 	border: 1px solid #ccc;
 	border-radius: 10px;
@@ -178,4 +178,15 @@
 
 #botao-apagar:hover{
 	opacity: 0.7;
+}
+
+#dados-item {
+  height: 300px;
+}
+
+#link-itens {
+    margin-top: 5px;
+    margin-left: 5px;
+    position: relative;
+    top: 20px;
 }
