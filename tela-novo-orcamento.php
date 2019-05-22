@@ -20,6 +20,8 @@
 
 	<script type="text/javascript" src="_scripts/funcoes.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="_scripts/jquery-3.4.1.min.js"></script>
+	<script src="_scripts/jquery.mask.js"></script>
 
 </head>
 <body>
@@ -29,7 +31,7 @@
 	<legend id="legenda">Cadastrar Orçamento</legend>
 	<form method="POST" action="_controles/processa-novo-orcamento.php">
 		<label for="titulo">Título:</label> <input type="text" id="titulo" name="titulo">
-		<label for="prazo" id="label-prazo">Prazo:</label> <input type="date" id="prazo" name="prazo"><br>
+		<label for="prazo" id="label-prazo">Prazo:</label> <input type="text" placeholder="dd/mm/aaaa" id="prazo" name="prazo"><br>
 		<label for="texto" id="descricao">Descrição:</label><br><textarea cols="50" rows="4" maxlength="180" placeholder="Digite uma descrição..."></textarea>
 
 		<fieldset id="selecionar-item" class="form-interno"><legend id="legenda-item">Selecionar Item</legend>
@@ -72,5 +74,10 @@
 	</form>
 	</fieldset>
 </div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#prazo').mask('00/00/0000')
+		});
+	</script>
 </body>
 </html>

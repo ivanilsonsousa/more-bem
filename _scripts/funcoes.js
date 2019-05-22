@@ -72,14 +72,14 @@ function inserirLinhaTabela() {
 	// Insere uma linha no fim da tabela.
 	let newRow = table.insertRow(numOfRows)
 
-    newCellId = newRow.insertCell(0)
+	newCellId = newRow.insertCell(0)
 	newCellMaterial = newRow.insertCell(1)
 	newCellMarca = newRow.insertCell(2)
 	newCellMedida = newRow.insertCell(3)
 	newCellQuantidade = newRow.insertCell(4)
 	newCellApagar = newRow.insertCell(5)
-    // Insere um conteúdo na coluna
-    newCellId.innerHTML = document.getElementById('id-item').value
+	// Insere um conteúdo na coluna
+	newCellId.innerHTML = document.getElementById('id-item').value
 	newCellMaterial.innerHTML = material
 	newCellMarca.innerHTML = document.getElementById('marca').value
 	newCellMedida.innerHTML = document.getElementById('medida').value
@@ -124,6 +124,12 @@ function abilitarOption(opcao){
 	}
 }
 
+function sair(){
+    if (confirm("Deseja realmente sair?")){
+        location.href="_controles/sair.php";
+    } 
+}
+
 function ano(){
 	now = new Date()
 	return now.getFullYear()
@@ -134,5 +140,7 @@ $(document).ready(function(){
 	$('#cnpj').mask('00.000.000/0000-00', {reverse: true})
 	$('#cep').mask('00.000-000', {placeholder: '00.000-000'})
 	$('#tel').mask('(00) 0 0000-0000', {placeholder: '(00) 0 0000-0000'})
+	$('#prazo').mask('00/00/0000', {reverse: true})
+	$('#cpf').mask('000.000.000-00', {placeholder: '000.000.000-00'})
 });
 // --- FIM FUNÇÕES JQUERY ---

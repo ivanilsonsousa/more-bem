@@ -16,9 +16,10 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
 		<link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+		<script type="text/javascript" src="_scripts/funcoes.js"></script>
 	</head>
 	<body>
-
 		<div class="site">
 			<h1>Bem-Vindo Rafael!</h1>
 			<button type="button" id="sair" onclick="sair()" class="sair"><i class="fas fa-power-off fa-2x"></i><br>Sair</button>
@@ -32,14 +33,5 @@
 				<button type="button" onclick="window.location.href='tela-adm-gerenciar-itens.php';" class="btn btn-primary"><i class="fas fa-cogs fa-2x"></i><i class="fas fa-list-ul fa-2x"></i><br><br><label>Gerenciar Itens</label></button>
 			</fieldset>
 		</div>
-
-    <script type="text/javascript">
-      function sair(){
-        if (confirm("Deseja realmente sair?")){
-            location.href="_controles/sair.php";
-        }
-      }
-    </script>
-
 	</body>
 </html>

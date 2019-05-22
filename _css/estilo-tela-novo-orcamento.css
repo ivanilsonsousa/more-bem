@@ -127,15 +127,15 @@
 }
 
 #prazo{
-  width: 170px;
+  width: 140px;
 }
 
 #quant{
-  width: 100px;
+  width: 95px;
 }
 
 #titulo{
-  width: 210px;
+  width: 240px;
 }
 
 #marca{
@@ -143,12 +143,12 @@
 }
 
 #medida{
-  width: 130px;
+  width: 150px;
 }
 
 #label-quant, #quant{
   position: relative;
-  left: 15px;
+  left: 0px;
 }
 
 #label-marca, #marca{
