@@ -1,9 +1,19 @@
 <?php
   session_start();
-  if (!isset($_SESSION['idforn'])) {
+  if (!isset($_SESSION['id'])) {
     header("location: index.php");
     exit;
   }
+  
+  require_once "_classes/BD.class.php";
+  $bd = new BD();
+  $bd->abrir("meubanco", "localhost", "root", "");
+
+  $id = $_SESSION['id'];
+
+  $dado = $bd->listarUsuario("1");
+	
+  $user = $dado['nome'];
 ?>
 
 <!DOCTYPE html>
@@ -14,14 +24,14 @@
 		<link rel="shortcut icon" href="_imagens/icone.png">
 		<link rel="stylesheet" type='text/css' href="_css/estilo-tela-inicial-adm.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
-		<link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+		<link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 		<script type="text/javascript" src="_scripts/funcoes.js"></script>
 	</head>
 	<body>
 		<div class="site">
-			<h1>Bem-Vindo Rafael!</h1>
+			<h1>Bem-Vindo <?php echo($user)?></h1>
 			<button type="button" id="sair" onclick="sair()" class="sair"><i class="fas fa-power-off fa-2x"></i><br>Sair</button>
 			<fieldset>
 				<legend>Ações</legend><br>

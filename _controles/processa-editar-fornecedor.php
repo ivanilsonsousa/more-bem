@@ -16,13 +16,11 @@
 		$rsenha = addslashes($_POST['rsenha']);
 		$m = "Mensagem Padrão";
 
-		if (!empty($idforn) && !empty($rsocial) && !empty($cnpj) && !empty($rua) && !empty($num) && !empty($cep) && !empty($tel) && !empty($email) && !empty($senha) && !empty($rsenha))
-		{
+		if (!empty($idforn) && !empty($rsocial) && !empty($cnpj) && !empty($rua) && !empty($num) && !empty($cep) && !empty($tel) && !empty($email) && !empty($senha) && !empty($rsenha)) {
 			$bd->abrir("meubanco", "localhost", "root", "");
 			
-			if($bd->msgErro == "")// tudo ok
-			{	
-				if($senha == $rsenha){
+			if($bd->msgErro == "") { //tudo ok	
+				if($senha == $rsenha) {
 					$f = new Fornecedor($rsocial, $cnpj, $rua, $num, $cep, $tel, $email, $senha);
 					$f->setIdForn($idforn);
 
@@ -30,30 +28,28 @@
 					unset($f);
 					$m = "Editado Com Sucesso!!!";
 					header("refresh: 0.1; ../area-privada.php");
-				}
-				else
-				{
+				} else {
 					$m = "Senha e Confirmar Senha não correspondem!";
 					//echo('<script>alert("'.$m.'");</script>');
-					header("refresh: 0.1; ../tela-editar-fornecedor.php");
+					//header("refresh: 0.1; ../tela-editar-fornecedor.php");
+					echo("<script>history.go(-1)</script>");
 				}
-			}
-			else
-			{
+			} else {
 				$m = "Erro: ".$bd->msgErro;
 				//echo('<script>alert("'.$m.'");</script>');
-				header("refresh: 0.1; ../tela-editar-fornecedor.php");
+				//header("refresh: 0.1; ../tela-editar-fornecedor.php");
+				echo("<script>history.go(-1)</script>");
 			}
-		}
-		else
-		{
+		} else {
 			$m = "Preencha Todos os Campos";
 			//echo('<script>alert("'.$m.'");</script>');
-			header("refresh: 0.1; ../tela-editar-fornecedor.php");
+			//header("refresh: 0.1; ../tela-editar-fornecedor.php");
+			echo("<script>history.go(-1)</script>");
 		}
 	}
 
 	echo('<script>alert("'.$m.'");</script>');
+	//echo("<script>history.go(-1)</script>");
 
 	//header("refresh: 0.1; ../area-privada.php");
 ?>

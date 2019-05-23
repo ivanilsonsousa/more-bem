@@ -1,5 +1,6 @@
 <?php
 	require_once "Fornecedor.class.php";
+	require_once "Usuario.class.php";
 	require_once "Item.class.php";
 
 	class BD {
@@ -33,6 +34,73 @@
 			}
 		}
 
+		public function inserirUsuario($u){
+			global $pdo;
+			global $msgErro;
+
+			try {
+				$sql = $pdo->prepare("INSERT INTO usuario (nome, cpf, tipo, email, senha) VALUES (:n, :cp, :t, :e, :s)");
+				$sql->bindValue(":n", $u->getNome());
+				$sql->bindValue(":cp", $u->getCPF());
+				$sql->bindValue(":t", $u->getTipo());
+				$sql->bindValue(":e", $u->getEmail());
+				$sql->bindValue(":s", md5($u->getSenha()));
+				$sql->execute();
+
+			} catch (Exception $e) {
+				$msgErro = $e->getMessage();
+				//echo "ERRRRRRRRRO <br>".$msgErro;
+			}
+		}
+
+		public function listarTodosOsUsuarios(){
+			global $pdo;
+			global $msgErro;
+
+			try {
+				$sql = $pdo->prepare("SELECT * FROM usuario ORDER BY id ASC");
+				$sql->execute();
+				return $sql;
+
+			} catch (Exception $e) {
+				$msgErro = $e->getMessage();
+			}
+		}
+
+		public function listarUsuario($id){
+			global $pdo;
+			global $msgErro;
+
+			try {
+				$sql = $pdo->prepare("SELECT * FROM usuario WHERE id = $id");
+				$sql->execute();
+				$dado = $sql->fetch(PDO::FETCH_ASSOC);
+				return $dado;
+
+			} catch (Exception $e) {
+				$msgErro = $e->getMessage();
+			}
+		}
+
+		public function editarUsuario($u){
+			global $pdo;
+			global $msgErro;
+
+			try {
+				$sql = $pdo->prepare("UPDATE usuario SET nome = :n, cpf = :cp, tipo = :t, email = :e, senha = :s WHERE id = :id");
+				$sql->bindValue(":n", $u->getNome());
+				$sql->bindValue(":cp", $u->geCPF());
+				$sql->bindValue(":t", $u->geTipo());
+				$sql->bindValue(":e", $f->getEmail());
+				$sql->bindValue(":s", md5($f->getSenha()));
+
+				$sql->execute();
+
+			} catch (Exception $e) {
+				$msgErro = $e->getMessage();
+			}
+		}
+
 		public function inserirForncedor($f){
 			global $pdo;
 			global $msgErro;
@@ -51,7 +119,6 @@
 
 			} catch (Exception $e) {
 				$msgErro = $e->getMessage();
-				//echo "ERRRRRRRRRO <br>".$msgErro;
 			}
 		}
 
@@ -60,7 +127,7 @@
 			global $msgErro;
 
 			try {
-				$sql = $pdo->prepare("SELECT * FROM fornecedor ORDER BY idforn ASC");
+				$sql = $pdo->prepare("SELECT * FROM fornecedor ORDER BY id ASC");
 				$sql->execute();
 				return $sql;
 
@@ -74,7 +141,7 @@
 			global $msgErro;
 
 			try {
-				$sql = $pdo->prepare("SELECT * FROM fornecedor WHERE idforn = $id");
+				$sql = $pdo->prepare("SELECT * FROM fornecedor WHERE id = $id");
 				$sql->execute();
 				$dado = $sql->fetch(PDO::FETCH_ASSOC);
 				return $dado;
@@ -89,7 +156,7 @@
 			global $msgErro;
 
 			try {
-				$sql = $pdo->prepare("UPDATE fornecedor SET rsocial = :rs, cnpj = :cn, rua = :r, num = :n, cep = :ce, tel = :t, email = :e, senha = :s WHERE idforn = :id");
+				$sql = $pdo->prepare("UPDATE fornecedor SET rsocial = :rs, cnpj = :cn, rua = :r, num = :n, cep = :ce, tel = :t, email = :e, senha = :s WHERE id = :id");
 
 				$sql->bindValue(":rs", $f->getRazaoSocial());
 				$sql->bindValue(":cn", $f->getCNPJ());
@@ -105,7 +172,6 @@
 
 			} catch (Exception $e) {
 				$msgErro = $e->getMessage();
-				//echo "<br>ERRRRRRRRRO <br>".$msgErro;
 			}
 		}
 
@@ -122,7 +188,6 @@
 
 			} catch (Exception $e) {
 				$msgErro = $e->getMessage();
-				//echo "ERRRRRRRRRO <br>".$msgErro;
 			}
 		}
 
@@ -140,7 +205,6 @@
 
 			} catch (Exception $e) {
 				$msgErro = $e->getMessage();
-				//echo "ERRRRRRRRRO <br>".$msgErro;
 			}
 		}
 
@@ -155,7 +219,6 @@
 
 			} catch (Exception $e) {
 				$msgErro = $e->getMessage();
-				//echo "ERRRRRRRRRO <br>".$msgErro;
 			}
 		}
 
@@ -192,7 +255,7 @@
 		public function logar($email, $senha) {
 			global $pdo;
 			//verificar se o email e senha estao cadastrados, se sim
-			$sql = $pdo->prepare("SELECT idforn FROM fornecedor WHERE email = :e AND senha = :s");
+			$sql = $pdo->prepare("SELECT id FROM fornecedor WHERE email = :e AND senha = :s");
 			$sql->bindValue(":e", $email);
 			$sql->bindValue(":s", md5($senha));
 			$sql->execute();
@@ -200,7 +263,7 @@
 			if ($sql->rowCount() > 0) {
 				$dado = $sql->fetch();
 				session_start();
-				$_SESSION['idforn'] = $dado['idforn'];
+				$_SESSION['id'] = $dado['id'];
 				return true; //conseguiu logar
 			} else {
 				return false; //nao foi possivel logar

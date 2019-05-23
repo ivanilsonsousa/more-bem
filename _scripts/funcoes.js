@@ -130,6 +130,16 @@ function sair(){
     } 
 }
 
+function verificaApagar(item){
+	console.log(item)
+	alert(item)
+    // if (confirm("Deseja realmente Apagar Esse Item?")){
+    //     //location.href="_controles/sair.php";
+    //     url = "_controles/processa-acoes-itens.php?acao=Apagar&id="+item
+    //     location.href= url
+    // } 
+}
+
 function ano(){
 	now = new Date()
 	return now.getFullYear()

@@ -18,29 +18,27 @@
 			
 			if($bd->verificaExistencia($email)) {
 				$m = "Email Já Cadastrado";
+				echo("<script>history.go(-1)</script>");
 			} elseif($bd->msgErro == "") {	
 				if($senha == $rsenha) {
-					//$u = new Usuario($nome, $cpf, $tipo, $email, $senha);
-					//$bd->inserirUsuario($u);
-					//unset($u);
-					$m = "Cadastrado Com Sucesso!Nome: $nome CPF: $cpf TIPO: $tipo EMAIL: $email SENHA: $senha";
-					header("refresh: 0.1; ../tela-novo-usuario.php");
+					$u = new Usuario($nome, $cpf, $tipo, $email, $senha);
+					$bd->inserirUsuario($u);
+					unset($u);
+					$m = "Cadastrado Com Sucesso!";
+					echo("<script>history.go(-2)</script>");
 				} else {
 					$m = "Senha e Confirmar Senha não correspondem!";
-					header("refresh: 0.1; ../tela-novo-usuario.php");
+					echo("<script>history.go(-1)</script>");
 				}
 			} else {
 				$m = "Erro: ".$bd->msgErro;
-				header("refresh: 0.1; ../tela-novo-usuario.php");
+				echo("<script>history.go(-1)</script>");
 			}
 		} else {
 			$m = "Preencha Todos os Campos";
-			header("refresh: 0.1; ../tela-novo-usuario.php");
-			//echo "<script>javascript:history.back(-2)</script>";
+			echo("<script>history.go(-1)</script>");
 		}
 	}
 
 	echo('<script>alert("'.$m.'");</script>');
-
-	//header("refresh: 0.1; ../tela-novo-fornecedor.php");
 ?>

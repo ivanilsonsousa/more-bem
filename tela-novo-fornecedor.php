@@ -3,12 +3,12 @@
 <head>
 	<title>Cadastrar Fornecedor</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="_css/estilo-tela-novo-fornecedor.css">
 	<link rel="shortcut icon" href="_imagens/icone.png">
+	<link rel="stylesheet" href="_css/estilo-tela-novo-fornecedor.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
-	<link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 	<script type="text/javascript" src="_scripts/funcoes.js"></script>
 	<script src="_scripts/jquery-3.4.1.min.js"></script>
@@ -45,8 +45,8 @@
 	</div>
 
 	<script>
-		$(document).ready(function(){
-			$('#cnpj').mask('00.000.000/0000-00', {reverse: true})
+		$(document).ready(function() {
+			$('#cnpj').mask('00.000.000/0000-00')
 			$('#cep').mask("00.000-000", {placeholder: "00.000-000"})
 			$('#tel').mask("(00) 0 0000-0000", {placeholder: "(00) 0 0000-0000"})
 		});

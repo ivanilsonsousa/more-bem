@@ -15,7 +15,7 @@
 	if($acao == "Apagar"){
 			if($bd->msgErro == ""){ // tudo ok
 				$bd->apagarItem($indice);
-				header('location: ../tela-adm-gerenciar-itens.php');
+				echo("<script>history.go(-1)</script>");
 			} else {
 				$m = "Erro: ".$bd->msgErro;
 			}

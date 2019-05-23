@@ -21,29 +21,27 @@
 			
 			if($bd->verificaExistencia($email)) {
 				$m = "Email Já Cadastrado";
+				echo("<script>history.go(-2)</script>");
 			} elseif($bd->msgErro == "") {	
 				if($senha == $rsenha) {
 					$f = new Fornecedor($rsocial, $cnpj, $rua, $num, $cep, $tel, $email, $senha);
 					$bd->inserirForncedor($f);
 					unset($f);
 					$m = "Cadastrado Com Sucesso!!!";
-					header("refresh: 0.1; ../tela-novo-fornecedor.php");
+					echo("<script>history.go(-2)</script>");
 				} else {
 					$m = "Senha e Confirmar Senha não correspondem!";
-					header("refresh: 0.1; ../tela-novo-fornecedor.php");
+					echo("<script>history.go(-1)</script>");
 				}
 			} else {
 				$m = "Erro: ".$bd->msgErro;
-				header("refresh: 0.1; ../tela-novo-fornecedor.php");
+				echo("<script>history.go(-1)</script>");
 			}
 		} else {
 			$m = "Preencha Todos os Campos";
-			header("refresh: 0.1; ../tela-novo-fornecedor.php");
-			//echo "<script>javascript:history.back(-2)</script>";
+			echo("<script>history.go(-1)</script>");
 		}
 	}
 
 	echo('<script>alert("'.$m.'");</script>');
-
-	header("refresh: 0.1; ../tela-novo-fornecedor.php");
 ?>

@@ -39,6 +39,7 @@
 					<table class="tabela table table-hover">
 						<thead>
 							<tr>
+								<th hidden>Id</th>
 								<th>Razão Social</th>
 								<th>Rua</th>
 								<th>Número</th>
@@ -51,6 +52,7 @@
 								$lista = $bd->listarTodosOsFornecedores();
 								while($dado = $lista->fetch(PDO::FETCH_ASSOC)) {?>
 									<tr>
+										<td hidden><?php echo $dado['id'];?></td>
 										<td><?php echo $dado['rsocial'];?></td>
 										<td><?php echo $dado['rua'];?></td>
 										<td><?php echo $dado['num'];?></td>
