@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if (!isset($_SESSION['idforn'])) {
+	if (!isset($_SESSION['id'])) {
 		header("location: index.php");
 		exit;
 	}
@@ -27,7 +27,8 @@
 					$bd->editarItem($i);
 					unset($i);
 					$m = "Editado Com Sucesso!!!";
-					header("refresh: 0.1; ../tela-adm-gerenciar-itens.php");
+					//header("refresh: 0.1; ../tela-adm-gerenciar-itens.php");
+					echo("<script>history.go(-2)</script>");
 			}	else {
 				$m = "Erro: ".$bd->msgErro;
 				//echo('<script>alert("'.$m.'");</script>');
@@ -40,7 +41,7 @@
 		}
 	}
 
-	echo('<script>alert("'.$m.'");</script>');
+	echo('<script>alert("'.$m.'")</script>');
 
 	//header("refresh: 0.1; ../area-privada.php");
 ?>
