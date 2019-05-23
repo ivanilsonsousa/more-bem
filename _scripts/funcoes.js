@@ -131,7 +131,6 @@ function sair(){
 }
 
 function verificaApagar(item){
-	console.log(item)
 	alert(item)
     // if (confirm("Deseja realmente Apagar Esse Item?")){
     //     //location.href="_controles/sair.php";

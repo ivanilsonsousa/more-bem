@@ -18,7 +18,7 @@
 				$bd->inserirItem($i);
 				unset($i);
 				$m = "Item Cadastrado Com Sucesso!!!";
-				//echo("<script>history.go(-1);history.go(0)﻿;</script>");
+				echo("<script>history.go(-1)</script>");
 			} else {
 				$m = "Erro: ".$bd->msgErro;
 				echo("<script>history.go(-1)</script>");

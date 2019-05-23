@@ -57,7 +57,7 @@
 	    							<td><?php echo $dado['marca'];?></td>
 	    							<td><?php echo $dado['medida'];?></td>
 									<td>
-										<a onclick='console.log(id)' title="Apagar" class "bnt"><i id="lixo" class="fas fa-trash-alt"></i></a>|
+										<a href="_controles/processa-acoes-itens.php?acao=Apagar&id=<?php echo $dado['id'];?>" title="Apagar" class "bnt"><i id="lixo" class="fas fa-trash-alt"></i></a>|
 										<a href="_controles/processa-acoes-itens.php?acao=Editar&id=<?php echo $dado['id'];?>" title="Editar" class="bnt"><i id="lapis" class="fas fa-pencil-alt"></i></a>
 									</td>
 								</tr>
