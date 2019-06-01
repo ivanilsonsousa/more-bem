@@ -122,6 +122,20 @@
 			}
 		}
 
+		public function apagarFornecedor($id){
+			global $pdo;
+			global $msgErro;
+
+			try {
+				$sql = $pdo->prepare("DELETE FROM fornecedor WHERE id = :id");
+				$sql->bindValue(":id", $id);
+				$sql->execute();
+
+			} catch (Exception $e) {
+				$msgErro = $e->getMessage();
+			}
+		}
+
 		public function listarTodosOsFornecedores(){
 			global $pdo;
 			global $msgErro;

@@ -14,14 +14,14 @@
 				header("location: ../tela-inicial-adm.php");
 			} else {
 				echo('<script>alert("Email e/ou senha incorretos");</script>');
-				header("refresh: 0.1; ../index.php");
+				echo("<script>history.go(-1)</script>");
 			}
 		} else {
 			echo('<script>alert("Erro ao abrir o banco");</script>');
-			header("refresh: 0.1; ../index.php");
+			echo("<script>history.go(-1)</script>");
 		}
 	} else {
 		echo('<script>alert("Preencha todos os campos");</script>');
-			header("refresh: 0.1; ../index.php");
+		echo("<script>history.go(-1)</script>");
 	}
 ?>

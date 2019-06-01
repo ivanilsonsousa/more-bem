@@ -8,7 +8,7 @@ function preencher(){
 	let sel = document.getElementById('seletor')
 	let indice = sel.options[sel.selectedIndex + 1].text
 
-	if(sel.selectedIndex) {
+	if (sel.selectedIndex) {
 		document.getElementById('botao-inserir').disabled = false
 		document.getElementById('quant').value = '1'
 	} else {
@@ -126,8 +126,20 @@ function abilitarOption(opcao){
 
 function sair(){
     if (confirm("Deseja realmente sair?")){
-        location.href="_controles/sair.php";
+        location.href = "_controles/sair.php";
     } 
+}
+
+function confirmarApagarItem(id){
+	if(confirm("Deseja realmente apagar esse item?")){
+		location.href = "_controles/processa-acoes-itens.php?acao=Apagar&id="+id 
+	}
+}
+
+function confirmarApagarFornecedor(id){
+	if(confirm("Deseja realmente apagar esse Fornecedor?")){
+		location.href = "_controles/processa-acoes-fornecedores.php?acao=Apagar&id="+id 
+	}
 }
 
 function verificaApagar(item){

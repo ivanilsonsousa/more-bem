@@ -68,7 +68,7 @@
 				</tr>
 			</table>
 		</div>
-		<a id="link-itens" href="tela-adm-gerenciar-itens.php">Gerenciar Itens</a>
+		<a id="link-itens" href="javascript:redirecionarParaGerenciarItens();" target="_blanck">Gerenciar Itens</a>
 		</fieldset>
 		<input class="btn btn-success" type="submit" value="Cadastrar" id="botao-cadastrar">
 	</form>
@@ -78,6 +78,10 @@
 		$(document).ready(function(){
 			$('#prazo').mask('00/00/0000')
 		});
+		
+		function redirecionarParaGerenciarItens() {
+        window.open('tela-adm-gerenciar-itens.php', '_blank');
+      	}
 	</script>
 </body>
 </html>
