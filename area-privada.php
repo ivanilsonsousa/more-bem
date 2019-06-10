@@ -11,12 +11,12 @@
 <head>
 	<title>home</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="_css/estilo-tela-inicial-fornecedor.css">
-	<link rel="shortcut icon" href="_imagens/icone.png">
+	<link rel="stylesheet" href="css/estilo-tela-inicial-fornecedor.css">
+	<link rel="shortcut icon" href="img/icone.png">
 </head>
 <body>
 
-	<img id="logo" src="_imagens/logo3.png" alt="nao carregou">
+	<img id="logo" src="img/logo3.png" alt="nao carregou">
 	<div id="saudacao">
 		<h2>Bem-Vindo Fornecedor!</h2>
 	</div>
@@ -29,7 +29,7 @@
 		<button onclick="window.location.href='tela-ver-fornecedores.php';" class="botao">Fornecedores</button>
 		<button onclick="window.location.href='tela-validar-fornecedor.php';" class="botao">Validar</button>
 		<button onclick="window.location.href='tela-novo-usuario.php';" class="botao">Novo User</button>
-		<button onclick="window.location.href='_controles/sair.php';" class="botao">Sair</button>
+		<button onclick="window.location.href='controller/sair.php';" class="botao">Sair</button>
 	</fieldset>
 
 </body>

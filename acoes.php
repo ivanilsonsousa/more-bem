@@ -1,5 +1,5 @@
 <?php
-	require_once "_classes/BD.class.php";
+	require_once "classes/BD.class.php";
 
     if (isset($_POST['indice'])){
 		$bd = new BD();

@@ -1,5 +1,5 @@
 <?php
-	require_once "_classes/BD.class.php";
+	require_once "classes/BD.class.php";
 
 	$bd = new BD();
 	$bd->abrir("meubanco", "localhost", "root", "");
@@ -10,7 +10,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>NavBar - Exemplo</title>
-	<link rel="stylesheet" href="_css/teste.css">
+	<link rel="stylesheet" href="css/teste.css">
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
 	<link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -23,7 +23,7 @@
 		<div class="container">
 			<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 			  <a class="navbar-brand" href="#">
-			    <img src="_imagens/logo.png" width="35" height="30" alt="">
+			    <img src="img/logo.png" width="35" height="30" alt="">
 			  </a>
 			  <a class="navbar-brand" href="#">More Bem</a>
 			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

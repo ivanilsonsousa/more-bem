@@ -1,10 +1,10 @@
 <?php 
-	require_once "../_classes/BD.class.php";
+	require_once "../classes/BD.class.php";
 
 	$bd = new BD();
 	
-
 	if(isset($_POST['rsocial'])) {
+		$idforn = addslashes($_POST['idforn']);
 		$rsocial = addslashes($_POST['rsocial']);
 		$cnpj = addslashes($_POST['cnpj']);
 		$rua = addslashes($_POST['rua']);
@@ -16,32 +16,40 @@
 		$rsenha = addslashes($_POST['rsenha']);
 		$m = "Mensagem Padrão";
 
-		if (!empty($rsocial) && !empty($cnpj) && !empty($rua) && !empty($num) && !empty($cep) && !empty($tel) && !empty($email) && !empty($senha) && !empty($rsenha)){
+		if (!empty($idforn) && !empty($rsocial) && !empty($cnpj) && !empty($rua) && !empty($num) && !empty($cep) && !empty($tel) && !empty($email) && !empty($senha) && !empty($rsenha)) {
 			$bd->abrir("meubanco", "localhost", "root", "");
 			
-			if($bd->verificaExistencia($email)) {
-				$m = "Email Já Cadastrado";
-				echo("<script>history.go(-2)</script>");
-			} elseif($bd->msgErro == "") {	
+			if($bd->msgErro == "") { //tudo ok	
 				if($senha == $rsenha) {
 					$f = new Fornecedor($rsocial, $cnpj, $rua, $num, $cep, $tel, $email, $senha);
-					$bd->inserirForncedor($f);
+					$f->setIdForn($idforn);
+
+					$bd->editarFornecedor($f);
 					unset($f);
-					$m = "Cadastrado Com Sucesso!!!";
-					echo("<script>history.go(-2)</script>");
+					$m = "Editado Com Sucesso!!!";
+					header("refresh: 0.1; ../area-privada.php");
 				} else {
 					$m = "Senha e Confirmar Senha não correspondem!";
+					//echo('<script>alert("'.$m.'");</script>');
+					//header("refresh: 0.1; ../tela-editar-fornecedor.php");
 					echo("<script>history.go(-1)</script>");
 				}
 			} else {
 				$m = "Erro: ".$bd->msgErro;
+				//echo('<script>alert("'.$m.'");</script>');
+				//header("refresh: 0.1; ../tela-editar-fornecedor.php");
 				echo("<script>history.go(-1)</script>");
 			}
 		} else {
 			$m = "Preencha Todos os Campos";
+			//echo('<script>alert("'.$m.'");</script>');
+			//header("refresh: 0.1; ../tela-editar-fornecedor.php");
 			echo("<script>history.go(-1)</script>");
 		}
 	}
 
 	echo('<script>alert("'.$m.'");</script>');
+	//echo("<script>history.go(-1)</script>");
+
+	//header("refresh: 0.1; ../area-privada.php");
 ?>

@@ -1,5 +1,5 @@
 <?php
-	require_once "_classes/BD.class.php";
+	require_once "classes/BD.class.php";
 
 	$bd = new BD();
 	$bd->abrir("meubanco", "localhost", "root", "");
@@ -10,18 +10,18 @@
 <head>
 	<title>Cadastrar Orçamento</title>
 	<meta charset="utf-8">
-	<link rel="shortcut icon" href="_imagens/icone.png">
-	<link rel="stylesheet" href="_css/estilo-tela-novo-orcamento.css">
+	<link rel="shortcut icon" href="img/icone.png">
+	<link rel="stylesheet" href="css/estilo-tela-novo-orcamento.css">
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-	<script type="text/javascript" src="_scripts/funcoes.js"></script>
+	<script type="text/javascript" src="scripts/funcoes.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="_scripts/jquery-3.4.1.min.js"></script>
-	<script src="_scripts/jquery.mask.js"></script>
+	<script src="scripts/jquery-3.4.1.min.js"></script>
+	<script src="scripts/jquery.mask.js"></script>
 
 </head>
 <body>
@@ -29,7 +29,7 @@
 	<i class="fas fa-clipboard fa-4x"></i></i></i><i class="fas fa-plus fa-2x"></i><br><br>
 	<fieldset id="campo-item">
 	<legend id="legenda">Cadastrar Orçamento</legend>
-	<form method="POST" action="_controles/processa-novo-orcamento.php">
+	<form method="POST" action="controller/processa-novo-orcamento.php">
 		<label for="titulo">Título:</label> <input type="text" id="titulo" name="titulo">
 		<label for="prazo" id="label-prazo">Prazo:</label> <input type="text" placeholder="dd/mm/aaaa" id="prazo" name="prazo"><br>
 		<label for="texto" id="descricao">Descrição:</label><br><textarea cols="50" rows="4" maxlength="180" placeholder="Digite uma descrição..."></textarea>
@@ -81,7 +81,7 @@
 		
 		function redirecionarParaGerenciarItens() {
         window.open('tela-adm-gerenciar-itens.php', '_blank');
-      	}
+    }
 	</script>
 </body>
 </html>

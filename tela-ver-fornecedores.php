@@ -1,5 +1,5 @@
 <?php
-	require_once "_classes/BD.class.php";
+	require_once "classes/BD.class.php";
 
 	$bd = new BD();
 	$bd->abrir("meubanco", "localhost", "root", "");
@@ -9,8 +9,8 @@
 <head>
 	<title>Ver Fornecedores</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="_css/estilo-tela-ver-fornecedores.css">
-	<link rel="shortcut icon" href="_imagens/icone.png">
+	<link rel="stylesheet" href="css/estilo-tela-ver-fornecedores.css">
+	<link rel="shortcut icon" href="img/icone.png">
 </head>
 <body>
 		<h2>FORNECEDORES DO BANCO DE DADOS</h2>

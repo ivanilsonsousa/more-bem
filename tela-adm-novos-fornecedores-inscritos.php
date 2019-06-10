@@ -1,5 +1,5 @@
 <?php
-	require_once "_classes/BD.class.php";
+	require_once "classes/BD.class.php";
 
 	$bd = new BD();
 	$bd->abrir("meubanco", "localhost", "root", "");
@@ -10,8 +10,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Novos Fornecedores Inscritos</title>
-		<link rel="shortcut icon" href="_imagens/icone.png">
-		<link rel="stylesheet" type='text/css' href="_css/estilo-tela-gerenciar-fornecedores-adm.css">
+		<link rel="shortcut icon" href="img/icone.png">
+		<link rel="stylesheet" type='text/css' href="css/estilo-tela-gerenciar-fornecedores-adm.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
 		<link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">

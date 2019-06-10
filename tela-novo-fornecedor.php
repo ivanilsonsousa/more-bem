@@ -3,16 +3,16 @@
 <head>
 	<title>Cadastrar Fornecedor</title>
 	<meta charset="utf-8">
-	<link rel="shortcut icon" href="_imagens/icone.png">
-	<link rel="stylesheet" href="_css/estilo-tela-novo-fornecedor.css">
+	<link rel="shortcut icon" href="img/icone.png">
+	<link rel="stylesheet" href="css/estilo-tela-novo-fornecedor.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-	<script type="text/javascript" src="_scripts/funcoes.js"></script>
-	<script src="_scripts/jquery-3.4.1.min.js"></script>
-	<script src="_scripts/jquery.mask.js"></script>
+	<script type="text/javascript" src="scripts/funcoes.js"></script>
+	<script src="scripts/jquery-3.4.1.min.js"></script>
+	<script src="scripts/jquery.mask.js"></script>
 
 </head>
 <body>
@@ -20,7 +20,7 @@
 		<i class="fas fa-user-tie fa-4x"></i><i class="fas fa-plus fa-2x"></i><br><br>
 		<fieldset id="campo-cadastro">
 		<legend id="legenda">Cadastrar Fornecedor</legend>
-		<form method="POST" action="_controles/processa-cadastro-fornecedor.php">
+		<form method="POST" action="controller/processa-cadastro-fornecedor.php">
 
       <label for="rsocial">Razão Social:</label> <input type="text" id="rsocial" name="rsocial"><br>
   		<label for="cnpj">CNPJ:</label> <input type="text" id="cnpj" name="cnpj" placeholder="00.000.000/0000-00"><br>

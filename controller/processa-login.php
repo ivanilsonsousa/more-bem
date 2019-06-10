@@ -1,5 +1,5 @@
 <?php
-	require_once "../_classes/BD.class.php";
+	require_once "../classes/BD.class.php";
 	$bd = new BD();
 
 	$usuario = addslashes($_POST["usuario"]);

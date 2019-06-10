@@ -3,8 +3,8 @@
 <head>
 	<title>Validar Fornecedor</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="_css/estilo-tela-validar-fornecedor.css">
-	<link rel="shortcut icon" href="_imagens/icone.png">
+	<link rel="stylesheet" href="css/estilo-tela-validar-fornecedor.css">
+	<link rel="shortcut icon" href="img/icone.png">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
 	<link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">

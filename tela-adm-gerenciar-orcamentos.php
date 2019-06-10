@@ -1,5 +1,5 @@
 <?php
-	require_once "_classes/BD.class.php";
+	require_once "classes/BD.class.php";
 
 	$bd = new BD();
 	$bd->abrir("meubanco", "localhost", "root", "");
@@ -10,8 +10,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Gerenciar Orçamentos</title>
-		<link rel="shortcut icon" href="_imagens/icone.png">
-		<link rel="stylesheet" type='text/css' href="_css/estilo-tela-gerenciar-orcamentos-adm.css">
+		<link rel="shortcut icon" href="img/icone.png">
+		<link rel="stylesheet" type='text/css' href="css/estilo-tela-gerenciar-orcamentos-adm.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -54,7 +54,7 @@
 	    							<td><?php echo $dado['material'];?></td>
 	    							<td><?php echo $dado['medida'];?></td>
 										<td>
-											<a href="#" title="Apagar" class "bnt"><i id="lixo" class="fas fa-trash-alt"></i></a>|
+											<a href="#" title="Apagar" class="bnt"><i id="lixo" class="fas fa-trash-alt"></i></a>|
 											<a href="#" title="Editar" class="bnt"><i id="lapis" class="fas fa-pencil-alt"></i></a>
 										</td>
 									</tr>

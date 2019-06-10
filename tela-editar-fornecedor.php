@@ -5,7 +5,7 @@
 		exit;
 	}
 	
-	require_once "_classes/BD.class.php";
+	require_once "classes/BD.class.php";
 	$bd = new BD();
 	$bd->abrir("meubanco", "localhost", "root", "");
 
@@ -22,14 +22,14 @@
 <head>
 	<title>Editar Perfil</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="_css/estilo-tela-editar-fornecedor.css">
-	<link rel="shortcut icon" href="_imagens/icone.png">
+	<link rel="stylesheet" href="css/estilo-tela-editar-fornecedor.css">
+	<link rel="shortcut icon" href="img/icone.png">
 </head>
 <body>
 
 	<fieldset id="campo-cadastro">
 	<legend id="legenda">Editar Dados</legend>
-	<form method="POST" action="_controles/processa-editar-fornecedor.php">
+	<form method="POST" action="controller/processa-editar-fornecedor.php">
 
 		<label for="rsocial">Razão Social:</label> <input type="text" id="rsocial" name="rsocial" value="<?php echo $f->getRazaoSocial();?>">
 		<label for="idforn">ID:</label> <input type="text" id="idforn" readonly="true" name="idforn" value="<?php echo $f->getIdForn();?>"><br>

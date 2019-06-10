@@ -5,7 +5,7 @@
 		exit;
 	}
 
-	require_once "../_classes/BD.class.php";
+	require_once "../classes/BD.class.php";
 
 	$bd = new BD();
 	$indice = $_GET['id'];
@@ -14,7 +14,7 @@
 
 	if($acao == "Apagar"){
 			if($bd->msgErro == ""){ // tudo ok
-				$bd->apagarFornecedor($indice);
+				$bd->apagarItem($indice);
 				echo("<script>history.go(-1)</script>");
 			} else {
 				$m = "Erro: ".$bd->msgErro;

@@ -1,7 +1,7 @@
-/* --- Descrição da função preenche() ---
-	Essa função pega o item selecionado no momento
-	da criação de um novo Orçamento no evento de
-	clique do elemento <select> dentro do fieldset
+/** --- Descrição da função preenche() ---
+ * Essa função pega o item selecionado no momento
+ * da criação de um novo Orçamento no evento de
+ * clique do elemento <select> dentro do fieldset
 */
 
 function preencher(){
@@ -36,18 +36,18 @@ function preencher(){
 	});
 }
 
-/*--- Descrição da função mostrarTexto() ---
-	Essa função exibe o texto da tela de login do campo senha ao clicar no icone de olho.
+/** --- Descrição da função mostrarTexto() ---
+ * Essa função exibe o texto da tela de login do campo senha ao clicar no icone de olho.
 */
 function mostrarTexto(){
 	if (document.getElementById('senha').type == 'password') {
 		document.getElementById('senha').type = 'text'
 		let img = document.getElementById('olho')
-		img.src = '_imagens/eye-slash-regular.svg'
+		img.src = 'img/eye-slash-regular.svg'
 	} else {
 		document.getElementById('senha').type = 'password'
 		let img = document.getElementById('olho')
-		img.src = '_imagens/eye-regular.svg'
+		img.src = 'img/eye-regular.svg'
 	}
 }
 
@@ -126,19 +126,19 @@ function abilitarOption(opcao){
 
 function sair(){
     if (confirm("Deseja realmente sair?")){
-        location.href = "_controles/sair.php";
+        location.href = "controller/sair.php";
     } 
 }
 
 function confirmarApagarItem(id){
 	if(confirm("Deseja realmente apagar esse item?")){
-		location.href = "_controles/processa-acoes-itens.php?acao=Apagar&id="+id 
+		location.href = "controller/processa-acoes-itens.php?acao=Apagar&id="+id 
 	}
 }
 
 function confirmarApagarFornecedor(id){
 	if(confirm("Deseja realmente apagar esse Fornecedor?")){
-		location.href = "_controles/processa-acoes-fornecedores.php?acao=Apagar&id="+id 
+		location.href = "controller/processa-acoes-fornecedores.php?acao=Apagar&id="+id 
 	}
 }
 

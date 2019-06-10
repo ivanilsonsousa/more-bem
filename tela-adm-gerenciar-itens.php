@@ -1,5 +1,5 @@
 <?php
-	require_once "_classes/BD.class.php";
+	require_once "classes/BD.class.php";
 
 	$bd = new BD();
 	$bd->abrir("meubanco", "localhost", "root", "");
@@ -10,14 +10,14 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Gerenciar Itens</title>
-		<link rel="shortcut icon" href="_imagens/icone.png">
+		<link rel="shortcut icon" href="img/icone.png">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+		<link rel="stylesheet" type='text/css' href="css/estilo-tela-gerenciar-itens-adm.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-		<link rel="stylesheet" type='text/css' href="_css/estilo-tela-gerenciar-itens-adm.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 		<link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-		<script type="text/javascript" src="_scripts/funcoes.js"></script>
+		<script type="text/javascript" src="scripts/funcoes.js"></script>
 	</head>
 	<body>
 
@@ -59,7 +59,7 @@
 								<td>
 									<!--href="_controles/processa-acoes-itens.php?acao=Apagar&id=<?php //echo $dado['id'];?>" -->
 									<a href='javascript:confirmarApagarItem(<?php echo $dado["id"];?>);' title="Apagar" class "bnt"><i id="lixo" class="fas fa-trash-alt"></i></a>|
-									<a href="_controles/processa-acoes-itens.php?acao=Editar&id=<?php echo $dado['id'];?>" title="Editar" class="bnt"><i id="lapis" class="fas fa-pencil-alt"></i></a>
+									<a href="controller/processa-acoes-itens.php?acao=Editar&id=<?php echo $dado['id'];?>" title="Editar" class="bnt"><i id="lapis" class="fas fa-pencil-alt"></i></a>
 								</td>
 							</tr>
 					<?php
